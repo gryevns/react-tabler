@@ -3,6 +3,9 @@ import cn from "classnames";
 
 import Control from "./control";
 import SelectGroup from "./selectGroup";
+import ImageCheck from "./imageCheck";
+import ColorInput from "./colorInput";
+import InputGroup from "./inputGroup";
 
 export interface FormGroupProps {
     children: React.ReactNode;
@@ -25,6 +28,14 @@ const FormLabel = ({ children, className, required }: FormLabelProps) => {
     return <label className={classes}>{children}</label>;
 };
 
+export interface FormFieldsetProps {
+    children: React.ReactNode;
+}
+
+const FormFieldset = ({ children }: FormFieldsetProps) => {
+    return <fieldset className="form-fieldset">{children}</fieldset>;
+};
+
 export interface FormProps extends React.FormHTMLAttributes<HTMLElement> {}
 
 const Form = ({ children, onSubmit, ...props }: FormProps) => (
@@ -35,6 +46,7 @@ const Form = ({ children, onSubmit, ...props }: FormProps) => (
 
 Form.Group = FormGroup;
 Form.Label = FormLabel;
+Form.Fieldset = FormFieldset;
 
 export default Form;
-export { Control, SelectGroup };
+export { Control, SelectGroup, ImageCheck, ColorInput, InputGroup };

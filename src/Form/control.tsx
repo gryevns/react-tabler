@@ -74,6 +74,24 @@ const ControlLabel = ({ children, className }: ControlLabelProps) => {
     return <div className={classes}>{children}</div>;
 };
 
+export interface ControlAddonProps {
+    children: React.ReactNode;
+}
+
+const ControlAddon = ({ children }: ControlAddonProps) => (
+    <span className="input-icon-addon">{children}</span>
+);
+
+export interface ControlIconProps {
+    children: React.ReactNode;
+    className?: string;
+}
+
+const ControlIcon = ({ children, className }: ControlIconProps) => {
+    const classes = cn("input-icon", className);
+    return <div className={classes}>{children}</div>;
+};
+
 export interface ControlProps extends React.InputHTMLAttributes<HTMLInputElement> {
     className?: string;
     rounded?: boolean;
@@ -123,5 +141,7 @@ Control.Select = ControlSelect;
 Control.Label = ControlLabel;
 Control.Group = ControlGroup;
 Control.Feedback = ControlFeedback;
+Control.Icon = ControlIcon;
+Control.Addon = ControlAddon;
 
 export default Control;
