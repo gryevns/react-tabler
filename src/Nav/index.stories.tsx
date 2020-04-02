@@ -48,7 +48,7 @@ export const Navigation = () => (
                         </Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Dropdown unfocus={false}>
+                        <Dropdown>
                             <Dropdown.Link className="dropdown-toggle">
                                 <Nav.LinkIcon>
                                     <Package size={16} />

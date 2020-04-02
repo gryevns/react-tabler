@@ -107,11 +107,18 @@ export const Sizes = () =>
 
 export const Icons = () => (
     <Button.List>
-        <Button variant="primary" icon>
-            <Check size={18} />
-        </Button>
+        <Button
+            variant="primary"
+            className="btn-facebook"
+            icon
+            render={props => (
+                <a {...props} href="#">
+                    <Check size={18} className="icon" />
+                </a>
+            )}
+        />
         <Button color={"dark" as Color}>
-            <Upload size={18} />
+            <Upload size={18} className="icon" />
             &nbsp;Upload
         </Button>
     </Button.List>

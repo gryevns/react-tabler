@@ -2,14 +2,9 @@ import React from "react";
 import cn from "classnames";
 import { Search } from "react-feather";
 
-export interface HeaderTitleProps {
-    children: React.ReactNode;
-    href: string;
-}
-
-const HeaderTitle = ({ children }: HeaderTitleProps, href) => (
+const HeaderTitle = ({ children, ...props }: React.AnchorHTMLAttributes<HTMLElement>) => (
     <a
-        href={href}
+        {...props}
         className="navbar-brand navbar-brand-autodark d-none-navbar-vertical"
     >
         {children}

@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import { colors, Color, sizes, Size } from "../common";
+import { colors, Color } from "../common";
 import Avatar, { Shape } from "./index";
 
 describe("Avatar", () => {
@@ -12,7 +12,8 @@ describe("Avatar", () => {
         });
     });
     it("should match size snapshot", () => {
-        sizes.map((size: Size) => {
+        const sizes = ["sm" as const, "md" as const, "lg" as const, "xl" as const];
+        sizes.map(size => {
             const wrapper = shallow(<Avatar size={size} />);
             expect(wrapper).toMatchSnapshot();
         });

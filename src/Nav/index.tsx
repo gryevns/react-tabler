@@ -40,17 +40,14 @@ const NavLinkTitle = ({ children }: NavLinkTitleProps) => (
     <span className="nav-link-title">{children}</span>
 );
 
-export interface NavLinkProps {
-    className?: string;
-    children: React.ReactNode;
-    onClick?: (e: React.MouseEvent) => any;
-}
-
-const NavLink = ({ children, className, onClick }: NavLinkProps) => {
-    // TODO render prop
+const NavLink = ({
+    children,
+    className,
+    ...props
+}: React.AnchorHTMLAttributes<HTMLElement>) => {
     const classes = cn("nav-link", className);
     return (
-        <a href="#" className={classes} onClick={onClick}>
+        <a href={props.href || "#"} {...props} className={classes}>
             {children}
         </a>
     );
@@ -87,13 +84,13 @@ const NavItem = ({ active, children, className }: NavItemProps) => {
     return <div className={classes}>{children}</div>;
 };
 
-export interface NavLogoProps {
-    children: React.ReactNode;
-}
-
-const NavLogo = ({ children }: NavLogoProps) => (
+const NavLogo = ({
+    children,
+    ...props
+}: React.AnchorHTMLAttributes<HTMLElement>) => (
     <a
-        href="."
+        {...props}
+        href={props.href || "."}
         className="navbar-brand navbar-brand-autodark d-none-navbar-horizontal"
     >
         {children}
@@ -143,7 +140,6 @@ Nav.Collapse = NavCollapse;
 Nav.Heading = NavBarHeading;
 Nav.Bar = NavBar;
 Nav.Item = NavItem;
-Nav.Link = NavLink;
 Nav.LinkIcon = NavLinkIcon;
 Nav.LinkTitle = NavLinkTitle;
 

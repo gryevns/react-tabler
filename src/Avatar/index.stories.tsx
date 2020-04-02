@@ -1,6 +1,6 @@
 import React from "react";
 
-import { colors, sizes } from "../common";
+import { colors } from "../common";
 import Avatar from "../Avatar";
 
 export default {
@@ -18,8 +18,9 @@ const Default = () => (
 export const Colors = () =>
     colors.map(color => <Avatar color={color} className="mr-1" />);
 
-export const Sizes = () =>
-    [...sizes, undefined].map(size => <Avatar size={size}>{size}</Avatar>);
+const sizes = ["sm" as const, "md" as const, "lg" as const, "xl" as const];
+
+export const Sizes = () => sizes.map(size => <Avatar size={size}>{size}</Avatar>);
 
 export const Status = () =>
     colors.map(color => (

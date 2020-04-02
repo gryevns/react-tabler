@@ -1,5 +1,6 @@
 import React from "react";
 
+import Card from "../Card";
 import Grid from "../Grid";
 
 export default {
@@ -9,30 +10,33 @@ export default {
 export const Layout = () => (
     <>
         <Grid.Row>
-            <Grid.Col>1 of 2</Grid.Col>
-            <Grid.Col>2 of 2</Grid.Col>
+            <Grid.Col sm={12} md={6}>
+                <Card>
+                    <Card.Body>1 of 2</Card.Body>
+                </Card>
+            </Grid.Col>
+            <Grid.Col sm={12} md={6}>
+                <Card>
+                    <Card.Body>2 of 2</Card.Body>
+                </Card>
+            </Grid.Col>
         </Grid.Row>
         <Grid.Row>
-            <Grid.Col>1 of 3</Grid.Col>
-            <Grid.Col>2 of 3</Grid.Col>
-            <Grid.Col>3 of 3</Grid.Col>
+            <Grid.Col>
+                <Card>
+                    <Card.Body>1 of 3</Card.Body>
+                </Card>
+            </Grid.Col>
+            <Grid.Col>
+                <Card>
+                    <Card.Body>2 of 3</Card.Body>
+                </Card>
+            </Grid.Col>
+            <Grid.Col>
+                <Card>
+                    <Card.Body>3 of 3</Card.Body>
+                </Card>
+            </Grid.Col>
         </Grid.Row>
     </>
-);
-
-export const Size = () => (
-    <div className="container" style={{ width: "500px" }}>
-        <Grid.Row size="0" style={{ background: "red" }}>
-            <Grid.Col>0</Grid.Col>
-        </Grid.Row>
-        <Grid.Row size="sm" style={{ background: "red" }}>
-            <Grid.Col>sm</Grid.Col>
-        </Grid.Row>
-        <Grid.Row size="md" style={{ background: "red" }}>
-            <Grid.Col>md</Grid.Col>
-        </Grid.Row>
-        <Grid.Row size="lg" style={{ background: "red" }}>
-            <Grid.Col>lg</Grid.Col>
-        </Grid.Row>
-    </div>
 );

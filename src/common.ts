@@ -45,7 +45,3 @@ export const variants = [
     "warning" as const,
     "danger" as const,
 ];
-
-export type Size = "sm" | "md" | "lg" | "xl";
-
-export const sizes = ["sm" as const, "md" as const, "lg" as const, "xl" as const];

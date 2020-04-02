@@ -1,6 +1,6 @@
 import * as React from "react";
 import cn from "classnames";
-import { Color, Size } from "../common";
+import { Color } from "../common";
 
 export interface AlertListProps {
     children: React.ReactNode;
@@ -14,6 +14,8 @@ const AvatarList = ({ children, className, stacked = false }: AlertListProps) =>
 };
 
 export type Shape = "rounded" | "rounded-circle" | "rounded-0" | "rounded-lg";
+
+export type Size = "sm" | "md" | "lg" | "xl";
 
 export interface AvatarProps {
     children?: React.ReactNode;

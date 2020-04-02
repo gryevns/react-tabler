@@ -77,10 +77,9 @@ const DropdownMenu = ({
 export interface DropdownProps {
     className?: string;
     children: React.ReactNode;
-    unfocus?: boolean;
 }
 
-const Dropdown = ({ className, children, unfocus = true }: DropdownProps) => {
+const Dropdown = ({ className, children }: DropdownProps) => {
     const ref = useRef(null);
     const [dropdownVisible, setDropdownVisible] = React.useState(false);
     const classes = cn("dropdown", className);
@@ -90,16 +89,12 @@ const Dropdown = ({ className, children, unfocus = true }: DropdownProps) => {
             setDropdownVisible(false);
         }
     }
-
-    if (unfocus) {
-        // better name?
-        useEffect(() => {
-            document.addEventListener("mousedown", handleClickOutside);
-            return () => {
-                document.removeEventListener("mousedown", handleClickOutside);
-            };
-        });
-    }
+    useEffect(() => {
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    });
 
     return (
         <DropdownContext.Provider value={{ dropdownVisible, setDropdownVisible }}>
@@ -135,7 +130,7 @@ const DropdownButton = ({ children, className, ...props }: DropdownButtonProps) 
     );
 };
 
-export interface DropdownLinkProps {
+export interface DropdownLinkProps extends React.AnchorHTMLAttributes<HTMLElement> {
     children: React.ReactNode;
     className?: string;
 }

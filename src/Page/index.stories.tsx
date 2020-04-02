@@ -104,6 +104,13 @@ const AvatarCard = () => (
 );
 
 export const Default = () => {
+    const [dark, setDark] = React.useState(false);
+    const onThemeToggle = () => {
+        // don't do this - use a theme provider if you have access to the DOM tree
+        const body = document.getElementsByTagName("BODY")[0];
+        body.className = dark ? "" : "theme-dark";
+        setDark(!dark);
+    };
     return (
         <Page>
             <Navigation />
@@ -117,20 +124,14 @@ export const Default = () => {
                         </div>
                         <div className="col-auto ml-auto d-print-none">
                             <span className="d-none d-sm-inline">
-                                <Button variant="secondary">New view</Button>
+                                <Button variant="secondary" onClick={onThemeToggle}>
+                                    {dark ? "Light Theme" : "Dark Theme"}
+                                </Button>
                             </span>
                             <Button
                                 icon
                                 variant="primary"
                                 className="ml-3 d-sm-inline-block"
-                            >
-                                <Plus size={18} />
-                                &nbsp; Create new report
-                            </Button>
-                            <Button
-                                icon
-                                variant="primary"
-                                className="ml-3 d-sm-none"
                             >
                                 <Plus size={18} />
                                 &nbsp; Create new report
