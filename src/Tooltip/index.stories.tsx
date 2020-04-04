@@ -39,3 +39,32 @@ export const Elements = () => (
         </div>
     </Tooltip>
 );
+
+export const Paragraph = () => (
+    <Card>
+        <Card.Body>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                ullamcorper porta viverra.{" "}
+                <Tooltip content="Tooltip Content" placement="bottom">
+                    <u>
+                        <b>Class aptent taciti</b>
+                    </u>
+                </Tooltip>{" "}
+                sociosqu ad litora torquent per conubia nostra, per inceptos
+                himenaeos. Donec vel gravida lacus, vel vestibulum sem. Donec blandit
+                elit id sem suscipit aliquam. Praesent tellus lectus, bibendum ac
+                convallis et, cursus at dolor. Vivamus enim arcu, rutrum quis ex
+                eget,{" "}
+                <Tooltip content="Tooltip Content" placement="top">
+                    <u>
+                        <b>venenatis fermentum dolor</b>
+                    </u>
+                </Tooltip>
+                . Maecenas feugiat leo quis orci aliquet, in accumsan neque dapibus.
+                Suspendisse magna velit, pulvinar id accumsan nec, dapibus nec
+                mauris. Quisque finibus erat pharetra sollicitudin condimentum.{" "}
+            </p>
+        </Card.Body>
+    </Card>
+);
