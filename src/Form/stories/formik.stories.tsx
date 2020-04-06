@@ -2,7 +2,7 @@ import React from "react";
 import { Formik } from "formik";
 import * as Yup from "yup";
 
-import Button from "../../Button";
+import Buttons from "../../Buttons";
 import Card from "../../Card";
 import Form, { Control } from "../../Form";
 
@@ -104,17 +104,15 @@ export const Validation = () => (
                                 <option>3</option>
                             </Control.Select>
                         </Form.Group>
-                        <Button
+                        <Buttons.Button
                             block
                             variant="primary"
                             disabled={isSubmitting || Object.keys(errors).length > 0}
                             loading={isSubmitting}
-                            render={props => (
-                                <button type="submit" {...props}>
-                                    Submit
-                                </button>
-                            )}
-                        />
+                            type="submit"
+                        >
+                            Submit
+                        </Buttons.Button>
                     </Form>
                 </Card.Body>
             </Card>

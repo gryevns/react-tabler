@@ -47,14 +47,12 @@ export const Avatar = ({
         },
         className,
     );
+    const styles = imageURL
+        ? { ...style, backgroundImage: `url(${imageURL})` }
+        : style;
 
     return (
-        <span
-            className={classes}
-            style={
-                imageURL ? { ...style, backgroundImage: `url(${imageURL})` } : style
-            }
-        >
+        <span className={classes} style={styles}>
             {status && <span className={`badge bg-${status}`}></span>}
             {children}
         </span>

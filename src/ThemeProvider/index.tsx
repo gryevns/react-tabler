@@ -1,0 +1,39 @@
+import React from "react";
+import cn from "classnames";
+
+export type Theme = "light" | "dark";
+
+export interface ITheme {
+    theme: Theme;
+    toggleTheme: () => void;
+}
+
+export const ThemeContext = React.createContext<ITheme>({
+    theme: "light",
+    toggleTheme: () => {},
+});
+
+const ThemeProvider = ({ children }) => {
+    const [theme, setTheme] = React.useState<Theme>("light");
+    const [bodyClasses, setBodyClasses] = React.useState("");
+    const bodyElement = document.getElementsByTagName("BODY")[0];
+    const toggleTheme = () => {
+        const body = bodyElement;
+        const isDark = theme === "dark";
+        body.className = cn(bodyClasses, { "theme-dark": !isDark });
+        setTheme(isDark ? "light" : "dark");
+    };
+    const state = {
+        theme,
+        toggleTheme: toggleTheme,
+    };
+    React.useEffect(() => {
+        setBodyClasses(bodyElement.className);
+        return () => {
+            bodyElement.className = bodyClasses;
+        };
+    }, []);
+    return <ThemeContext.Provider value={state}>{children}</ThemeContext.Provider>;
+};
+
+export default ThemeProvider;

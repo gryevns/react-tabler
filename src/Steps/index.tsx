@@ -2,19 +2,24 @@ import React from "react";
 import cn from "classnames";
 import { Color } from "../common";
 
-export interface StepProps {
+export interface StepProps extends React.AnchorHTMLAttributes<HTMLElement> {
     active?: boolean;
     children?: React.ReactNode;
 }
 
-const Step = ({ active, children }: StepProps) => {
-    const classes = cn("step-item", { active });
-    return (
-        <a href="#" className={classes}>
-            {children}
-        </a>
-    );
-};
+const Step = React.forwardRef(
+    (
+        { active, children, ...props }: StepProps,
+        ref: React.Ref<HTMLAnchorElement>,
+    ) => {
+        const classes = cn("step-item", { active });
+        return (
+            <a ref={ref} {...props} className={classes}>
+                {children}
+            </a>
+        );
+    },
+);
 
 export interface StepsProps {
     className?: string;

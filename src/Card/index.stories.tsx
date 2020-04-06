@@ -3,7 +3,7 @@ import { ChevronUp, ChevronDown, Heart, Minus } from "react-feather";
 import { withKnobs, boolean } from "@storybook/addon-knobs";
 
 import Avatar from "../Avatar";
-import Button from "../Button";
+import Buttons from "../Buttons";
 import Card from "../Card";
 import Grid from "../Grid";
 import Progress from "../Progress";
@@ -23,7 +23,7 @@ export const Default = () => (
 const sizes = ["sm" as const, undefined, "md" as const, "lg" as const];
 
 export const Padding = () =>
-    sizes.map(size => (
+    sizes.map((size) => (
         <Card size={size}>
             <Card.Body>This is some text within a card body.</Card.Body>
         </Card>
@@ -131,12 +131,12 @@ export const Advanced = () => (
         <Card.Header>
             <Card.Title>Title</Card.Title>
             <Card.Options>
-                <Button size="sm" className="mr-1">
+                <Buttons.Button size="sm" className="mr-1" variant="primary">
                     Action 1
-                </Button>
-                <Button size="sm" variant="secondary">
+                </Buttons.Button>
+                <Buttons.Button size="sm" variant="secondary">
                     Action 2
-                </Button>
+                </Buttons.Button>
             </Card.Options>
         </Card.Header>
         <Card.Body>
@@ -150,7 +150,7 @@ export const Advanced = () => (
 );
 
 export const Status = () =>
-    ["top", "bottom", "left"].map(position => {
+    ["top", "bottom", "left"].map((position) => {
         const props = { [position]: true };
         return (
             <Card>
@@ -192,37 +192,6 @@ export const Loading = () => (
             nulla temporibus!
         </Card.Body>
     </Card>
-);
-
-export const Tabbed = () => (
-    <Card.Tabs>
-        <Tabs defaultEventKey="home">
-            <Tabs.Header>
-                <Tabs.Tab id="home">Home</Tabs.Tab>
-                <Tabs.Tab id="profile">Profile</Tabs.Tab>
-            </Tabs.Header>
-            <Tabs.Content>
-                <Tabs.Panel id="home" className="card">
-                    <Card.Body>
-                        <div>
-                            Cursus turpis vestibulum, dui in pharetra vulputate id
-                            sed non turpis ultricies fringilla at sed facilisis lacus
-                            pellentesque purus nibh
-                        </div>
-                    </Card.Body>
-                </Tabs.Panel>
-                <Tabs.Panel id="profile" className="card">
-                    <Card.Body>
-                        <div>
-                            Fringilla egestas nunc quis tellus diam rhoncus ultricies
-                            tristique enim at diam, sem nunc amet, pellentesque id
-                            egestas velit sed
-                        </div>
-                    </Card.Body>
-                </Tabs.Panel>
-            </Tabs.Content>
-        </Tabs>
-    </Card.Tabs>
 );
 
 // TODO move these somewhere else
@@ -323,8 +292,9 @@ export const ChildrenStat = ({
             <Card.Body>
                 {movement !== undefined && (
                     <div
-                        className={`card-value float-right text-${color ||
-                            movementColor}`}
+                        className={`card-value float-right text-${
+                            color || movementColor
+                        }`}
                     >
                         {movementString}
                     </div>

@@ -1,11 +1,10 @@
-import React from 'react';
+import React from "react";
 import cn from "classnames";
 import CardOptions from "./CardOptions";
 import CardStatus from "./CardStatus";
 import CardHeader from "./CardHeader";
 import CardTitle from "./CardTitle";
 import CardBody from "./CardBody";
-import CardTabs from "./CardTabs";
 import CardFooter from "./CardFooter";
 
 export type Size = "sm" | "md" | "lg";
@@ -19,7 +18,14 @@ export interface CardProps {
     style?: React.CSSProperties;
 }
 
-const Card = function ({ className, children, aside, stacked, size, style }: CardProps) {
+const Card = function ({
+    className,
+    children,
+    aside,
+    stacked,
+    size,
+    style,
+}: CardProps) {
     const classes = cn(
         {
             card: true,
@@ -27,7 +33,7 @@ const Card = function ({ className, children, aside, stacked, size, style }: Car
             [`card-${size}`]: size,
             "card-stacked": stacked,
         },
-        className
+        className,
     );
 
     return (
@@ -43,6 +49,5 @@ Card.Body = CardBody;
 Card.Footer = CardFooter;
 Card.Options = CardOptions;
 Card.Status = CardStatus;
-Card.Tabs = CardTabs;
 
 export default Card;

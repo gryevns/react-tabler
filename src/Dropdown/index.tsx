@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import cn from "classnames";
-import Button from "../Button";
+import Buttons from "../Buttons";
 import Nav from "../Nav";
 import { Variant } from "../common";
 
@@ -118,7 +118,7 @@ const DropdownButton = ({ children, className, ...props }: DropdownButtonProps) 
     const onClick = () => setDropdownVisible(!dropdownVisible);
     const classes = cn("dropdown-toggle", className);
     return (
-        <Button
+        <Buttons.Button
             onClick={onClick}
             className={classes}
             {...props}
@@ -126,7 +126,7 @@ const DropdownButton = ({ children, className, ...props }: DropdownButtonProps) 
             aria-expanded={dropdownVisible}
         >
             {children}
-        </Button>
+        </Buttons.Button>
     );
 };
 

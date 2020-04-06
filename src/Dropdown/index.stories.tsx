@@ -1,7 +1,7 @@
 import React from "react";
 
 import Badge from "../Badge";
-import Button from "../Button";
+import Buttons from "../Buttons";
 import Card from "../Card";
 import Dropdown from "../Dropdown";
 import { Calendar, Edit, Settings } from "react-feather";
@@ -10,8 +10,8 @@ export default {
     title: "Dropdown",
 };
 
-export const Buttons = () => (
-    <Button.List>
+export const Button = () => (
+    <Buttons.List>
         <Dropdown>
             <Dropdown.Button variant="secondary">Click Me!&nbsp;</Dropdown.Button>
             <Dropdown.Menu>
@@ -24,6 +24,7 @@ export const Buttons = () => (
         <Dropdown>
             <Dropdown.Button variant="secondary">
                 <Calendar size={18} />
+                &nbsp;
             </Dropdown.Button>
             <Dropdown.Menu>
                 <Dropdown.Header>Header</Dropdown.Header>
@@ -40,7 +41,7 @@ export const Buttons = () => (
                 </Dropdown.Item>
             </Dropdown.Menu>
         </Dropdown>
-    </Button.List>
+    </Buttons.List>
 );
 
 export const Link = () => (

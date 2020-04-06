@@ -1,95 +1,42 @@
 import React from "react";
+import { withKnobs, boolean } from "@storybook/addon-knobs";
 
-import Card from "../Card";
-import Tabs from "../Tabs";
+import Tabs from ".";
 
 export default {
     title: "Tabs",
+    decorators: [withKnobs],
 };
 
-export const Cards = () => (
-    <Card>
-        <Tabs defaultEventKey="home">
-            <Tabs.Header>
-                <Tabs.Tab id="home">Home</Tabs.Tab>
-                <Tabs.Tab id="profile">Profile</Tabs.Tab>
-            </Tabs.Header>
-            <Card.Body>
-                <Tabs.Content>
-                    <Tabs.Panel id="home">
-                        <div>
-                            Cursus turpis vestibulum, dui in pharetra vulputate id
-                            sed non turpis ultricies fringilla at sed facilisis lacus
-                            pellentesque purus nibh
-                        </div>
-                    </Tabs.Panel>
-                    <Tabs.Panel id="profile">
-                        <div>
-                            Fringilla egestas nunc quis tellus diam rhoncus ultricies
-                            tristique enim at diam, sem nunc amet, pellentesque id
-                            egestas velit sed
-                        </div>
-                    </Tabs.Panel>
-                </Tabs.Content>
-            </Card.Body>
+export const Default = () => {
+    const props = {
+        cards: boolean("Card Style", false),
+        fill: boolean("Fill Nav", false),
+        alt: boolean("Alternative Style", false),
+    };
+    return (
+        <Tabs {...props}>
+            <Tabs.Tab title="Home" eventKey="home">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+                consectetur quam at justo accumsan facilisis. Lorem ipsum dolor sit
+                amet, consectetur adipiscing elit. Pellentesque lacinia velit pretium
+                nibh pellentesque malesuada. Fusce semper tempor nisi, a pretium
+                justo euismod eu. Sed eget euismod nulla. Praesent vitae feugiat
+                lacus, quis malesuada nunc. In eleifend posuere ipsum. Pellentesque
+                ullamcorper lorem in enim eleifend lacinia. Nam elit quam, venenatis
+                in condimentum id, tempor at nisi. Sed congue eu urna sit amet
+                iaculis.
+            </Tabs.Tab>
+            <Tabs.Tab title="About" eventKey="about">
+                Quisque in lectus vehicula elit laoreet rhoncus. Vestibulum a laoreet
+                neque, et blandit odio. Suspendisse a pretium massa. Cras lacinia est
+                nisi, sollicitudin aliquam nisl tincidunt eu. Sed dignissim magna non
+                est blandit, eu euismod diam laoreet. Pellentesque condimentum,
+                mauris fermentum scelerisque elementum, sapien erat varius metus,
+                vitae pretium mi metus dignissim turpis. Nullam nec sapien urna. Sed
+                vulputate sagittis congue. Cras fringilla ex a massa convallis
+                pretium. Ut eleifend sem sapien, a fringilla justo scelerisque eget.
+            </Tabs.Tab>
         </Tabs>
-    </Card>
-);
-
-export const FullWidth = () => (
-    <Card>
-        <Tabs defaultEventKey="profile">
-            <Tabs.Header fill={true}>
-                <Tabs.Tab id="home">Home</Tabs.Tab>
-                <Tabs.Tab id="profile">Profile</Tabs.Tab>
-            </Tabs.Header>
-            <Card.Body>
-                <Tabs.Content>
-                    <Tabs.Panel id="home">
-                        <div>
-                            Cursus turpis vestibulum, dui in pharetra vulputate id
-                            sed non turpis ultricies fringilla at sed facilisis lacus
-                            pellentesque purus nibh
-                        </div>
-                    </Tabs.Panel>
-                    <Tabs.Panel id="profile">
-                        <div>
-                            Fringilla egestas nunc quis tellus diam rhoncus ultricies
-                            tristique enim at diam, sem nunc amet, pellentesque id
-                            egestas velit sed
-                        </div>
-                    </Tabs.Panel>
-                </Tabs.Content>
-            </Card.Body>
-        </Tabs>
-    </Card>
-);
-
-export const Alternate = () => (
-    <Card>
-        <Tabs defaultEventKey="profile">
-            <Tabs.Header alt>
-                <Tabs.Tab id="home">Home</Tabs.Tab>
-                <Tabs.Tab id="profile">Profile</Tabs.Tab>
-            </Tabs.Header>
-            <Card.Body>
-                <Tabs.Content>
-                    <Tabs.Panel id="home" className="active show">
-                        <div>
-                            Cursus turpis vestibulum, dui in pharetra vulputate id
-                            sed non turpis ultricies fringilla at sed facilisis lacus
-                            pellentesque purus nibh
-                        </div>
-                    </Tabs.Panel>
-                    <Tabs.Panel id="profile">
-                        <div>
-                            Fringilla egestas nunc quis tellus diam rhoncus ultricies
-                            tristique enim at diam, sem nunc amet, pellentesque id
-                            egestas velit sed
-                        </div>
-                    </Tabs.Panel>
-                </Tabs.Content>
-            </Card.Body>
-        </Tabs>
-    </Card>
-);
+    );
+};

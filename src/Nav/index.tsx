@@ -40,18 +40,19 @@ const NavLinkTitle = ({ children }: NavLinkTitleProps) => (
     <span className="nav-link-title">{children}</span>
 );
 
-const NavLink = ({
-    children,
-    className,
-    ...props
-}: React.AnchorHTMLAttributes<HTMLElement>) => {
-    const classes = cn("nav-link", className);
-    return (
-        <a href={props.href || "#"} {...props} className={classes}>
-            {children}
-        </a>
-    );
-};
+const NavLink = React.forwardRef(
+    (
+        { children, className, ...props }: React.AnchorHTMLAttributes<HTMLElement>,
+        ref: React.Ref<HTMLAnchorElement>,
+    ) => {
+        const classes = cn("nav-link", className);
+        return (
+            <a ref={ref} {...props} className={classes}>
+                {children}
+            </a>
+        );
+    },
+);
 
 export interface NavBarProps {
     className?: string;
