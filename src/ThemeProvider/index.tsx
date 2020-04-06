@@ -3,15 +3,14 @@ import cn from "classnames";
 
 export type Theme = "light" | "dark";
 
-export interface ITheme {
+interface ContextState {
     theme: Theme;
     toggleTheme: () => void;
 }
 
-export const ThemeContext = React.createContext<ITheme>({
+export const ThemeContext = React.createContext({
     theme: "light",
-    toggleTheme: () => {},
-});
+} as ContextState);
 
 const ThemeProvider = ({ children }) => {
     const [theme, setTheme] = React.useState<Theme>("light");
@@ -25,7 +24,7 @@ const ThemeProvider = ({ children }) => {
     };
     const state = {
         theme,
-        toggleTheme: toggleTheme,
+        toggleTheme,
     };
     React.useEffect(() => {
         setBodyClasses(bodyElement.className);

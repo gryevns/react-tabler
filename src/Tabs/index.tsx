@@ -3,17 +3,19 @@ import cn from "classnames";
 
 import Card from "../Card";
 
-const TabContext = React.createContext({
-    active: undefined,
-    setActive: (eventKey: string) => {},
-});
+interface ContextState {
+    active: string | null;
+    setActive: (eventKey: string) => void;
+}
+
+const TabContext = React.createContext({} as ContextState);
 
 const Nav = ({ tabs, fill = false, alt = false }) => {
     const { active, setActive } = React.useContext(TabContext);
     const classes = cn("nav nav-tabs", { "nav-fill": fill, "nav-tabs-alt": alt });
     return (
         <ul className={classes}>
-            {Object.keys(tabs).map((item) => {
+            {Object.keys(tabs).map(item => {
                 const classes = cn("nav-link", { active: item === active });
                 return (
                     <li className="nav-item" onClick={() => setActive(item)}>
@@ -25,7 +27,7 @@ const Nav = ({ tabs, fill = false, alt = false }) => {
     );
 };
 
-const CardTabs = (props) => (
+const CardTabs = props => (
     <div className="card-tabs">
         <Nav {...props} />
         <div className="tab-content">
@@ -36,7 +38,7 @@ const CardTabs = (props) => (
     </div>
 );
 
-const DefaultTabs = (props) => (
+const DefaultTabs = props => (
     <Card>
         <Nav {...props} />
         <Card.Body>
@@ -70,16 +72,13 @@ const Tabs = ({ cards = false, children, defaultEventKey, ...props }: TabsProps)
     React.useEffect(() => {
         // construct tab headers on initial mount only
         setTabs(
-            React.Children.map(children, (child) => child).reduce(
-                (result, child) => {
-                    const {
-                        props: { eventKey, title, children },
-                    } = child;
-                    result[eventKey] = { title, children };
-                    return result;
-                },
-                {},
-            ),
+            React.Children.map(children, child => child).reduce((result, child) => {
+                const {
+                    props: { eventKey, title, children },
+                } = child;
+                result[eventKey] = { title, children };
+                return result;
+            }, {}),
         );
     }, []);
 

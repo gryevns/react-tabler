@@ -1,9 +1,11 @@
 import React from "react";
 import cn from "classnames";
 
-const ModalContext = React.createContext({
-    onHide: () => {},
-});
+interface ContextState {
+    onHide: () => void;
+}
+
+const ModalContext = React.createContext({} as ContextState);
 
 const ModalHeader = ({ children }) => {
     const { onHide } = React.useContext(ModalContext);

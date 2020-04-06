@@ -1,10 +1,14 @@
 import React from "react";
 import cn from "classnames";
 
+interface ContextState {
+    menuVisible: boolean;
+    setMenuVisible: (visible: boolean) => {};
+}
+
 export const NavContext = React.createContext({
     menuVisible: false,
-    setMenuVisible: (visible: boolean): any => {},
-});
+} as ContextState);
 
 const NavToggle = ({ classname = "ml-3 ml-lg-0" }) => {
     const { menuVisible, setMenuVisible } = React.useContext(NavContext);

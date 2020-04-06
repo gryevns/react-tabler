@@ -3,9 +3,11 @@ import cn from "classnames";
 
 import Buttons from "../Buttons";
 
-const ToastContext = React.createContext({
-    onHide: () => {},
-});
+interface ContextState {
+    onHide: () => void;
+}
+
+const ToastContext = React.createContext({} as ContextState);
 
 export interface ToastTitleProps {
     className?: string;

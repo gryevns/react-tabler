@@ -4,10 +4,14 @@ import Buttons from "../Buttons";
 import Nav from "../Nav";
 import { Variant } from "../common";
 
+interface ContextState {
+    dropdownVisible: boolean;
+    setDropdownVisible: (visible: boolean) => void;
+}
+
 export const DropdownContext = React.createContext({
     dropdownVisible: false,
-    setDropdownVisible: (visible: boolean): any => {},
-});
+} as ContextState);
 
 const DropdownHeader = ({ children }) => (
     <span className="dropdown-header">{children}</span>
