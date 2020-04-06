@@ -1,13 +1,11 @@
 import React from "react";
-import { ChevronUp, ChevronDown, Heart, Minus } from "react-feather";
+import { Heart } from "react-feather";
 import { withKnobs, boolean } from "@storybook/addon-knobs";
 
 import Avatar from "../Avatar";
 import Buttons from "../Buttons";
 import Card from "../Card";
 import Grid from "../Grid";
-import Progress from "../Progress";
-import Tabs from "../Tabs";
 
 export default {
     title: "Card",
@@ -192,139 +190,4 @@ export const Loading = () => (
             nulla temporibus!
         </Card.Body>
     </Card>
-);
-
-// TODO move these somewhere else
-
-export const PostCard = () => (
-    <Card className="card-aside">
-        <a
-            href="#"
-            className="card-aside-column"
-            style={{ backgroundImage: "url(https://picsum.photos/500/200)" }}
-        ></a>
-        <Card.Body>
-            <h4>
-                <a href="#">And this isn't my nose. This is a false one.</a>
-            </h4>
-            <div className="text-muted">
-                Look, my liege! The Knights Who Say Ni demand a sacrifice! …Are you
-                suggesting that coconuts migr...
-            </div>
-            <div className="d-flex align-items-center pt-5 mt-auto">
-                <div
-                    className="avatar avatar-md mr-3"
-                    style={{ backgroundImage: "url(https://picsum.photos/64)" }}
-                ></div>
-                <div>
-                    <a href="#" className="text-default">
-                        Rose Bradley
-                    </a>
-                    <small className="d-block text-muted">3 days ago</small>
-                </div>
-                <div className="ml-auto text-muted">
-                    <a href="#" className="icon d-none d-md-inline-block ml-3">
-                        <i className="fe fe-heart mr-1"></i>
-                    </a>
-                </div>
-            </div>
-        </Card.Body>
-    </Card>
-);
-
-export const ProgressStat = ({
-    label = "New Feedback",
-    value = "62",
-    width = 28,
-    color = undefined,
-}) => (
-    <Card>
-        <Card.Body className="text-center">
-            <h5>{label}</h5>
-            <div className="display-4 font-weight-bold mb-4">{value}</div>
-            <Progress size="sm">
-                <Progress.Bar color={color} width={width} />
-            </Progress>
-        </Card.Body>
-    </Card>
-);
-
-export const ChangeStat = ({
-    label = "New Tickets",
-    total = "43",
-    movement = 6,
-}) => {
-    const movementString = `${movement}%`;
-    const movementColor = !movement ? "yellow" : movement > 0 ? "green" : "red";
-    return (
-        <Card>
-            <Card.Body className="p-3 text-center">
-                {movement !== undefined && (
-                    <div className={`text-right text-${movementColor}`}>
-                        {movementString}
-                        {!movement ? (
-                            <Minus />
-                        ) : movement > 0 ? (
-                            <ChevronUp />
-                        ) : (
-                            <ChevronDown />
-                        )}
-                    </div>
-                )}
-                <div className="display-4 font-weight-bold m-0">{total}</div>
-                <h5 className="mb-4">{label}</h5>
-            </Card.Body>
-        </Card>
-    );
-};
-
-export const ChildrenStat = ({
-    movement = 11,
-    total = "23",
-    label = "example",
-    color,
-    children = null,
-}) => {
-    const movementString = `${movement}%`;
-    const movementColor = !movement ? "yellow" : movement > 0 ? "green" : "red";
-    return (
-        <Card>
-            <Card.Body>
-                {movement !== undefined && (
-                    <div
-                        className={`card-value float-right text-${
-                            color || movementColor
-                        }`}
-                    >
-                        {movementString}
-                    </div>
-                )}
-                <h3 className="mb-1">{total}</h3>
-                <div className="text-muted">{label}</div>
-            </Card.Body>
-            {children}
-        </Card>
-    );
-};
-
-export const IconStat = ({
-    total = "11",
-    label = "example",
-    children,
-    value = "23",
-    color = "blue",
-}) => (
-    <div className="card p-3">
-        <div className="d-flex align-items-center">
-            <span className={`stamp stamp-md bg-${color} mr-3`}>{children}</span>
-            <div>
-                <h4 className="m-0">
-                    <a href="#">
-                        {total} <small>{label}</small>
-                    </a>
-                </h4>
-                <small className="text-muted">{value}</small>
-            </div>
-        </div>
-    </div>
 );

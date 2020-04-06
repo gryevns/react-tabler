@@ -11,13 +11,7 @@ import Table from "../Table";
 import ThemeProvider, { ThemeContext } from "../ThemeProvider";
 import { SocialMediaTraffice, Tasks } from "../Table/index.stories";
 import List from "../List";
-import {
-    ChangeStat,
-    ChildrenStat,
-    IconStat,
-    PostCard,
-    ProgressStat,
-} from "../Card/index.stories";
+import { ChangeCard, IconCard, PostCard, ProgressCard, StatCard } from "../Extra";
 import { Responsive as UserTable } from "../Table/index.stories";
 
 import { Browsers } from "../Table/index.stories";
@@ -147,21 +141,21 @@ export const Default = () => {
                     </Page.Header>
                     <Grid.Row cards deck>
                         <Grid.Col md={3} sm={6}>
-                            <ChangeStat
+                            <ChangeCard
                                 movement={6}
                                 total="43"
                                 label="New Tickets"
                             />
                         </Grid.Col>
                         <Grid.Col md={3} sm={6}>
-                            <ChangeStat
+                            <ChangeCard
                                 movement={-3}
                                 total="17"
                                 label="Closed Today"
                             />
                         </Grid.Col>
                         <Grid.Col md={3} sm={6}>
-                            <ProgressStat
+                            <ProgressCard
                                 label="New Feedback"
                                 color="red"
                                 width={28}
@@ -169,7 +163,7 @@ export const Default = () => {
                             />
                         </Grid.Col>
                         <Grid.Col md={3} sm={6}>
-                            <ProgressStat
+                            <ProgressCard
                                 label="Today Profit"
                                 color="green"
                                 width={84}
@@ -179,43 +173,43 @@ export const Default = () => {
                     </Grid.Row>
                     <Grid.Row cards deck>
                         <Grid.Col sm={6} lg={3}>
-                            <IconStat
+                            <IconCard
                                 total="132"
                                 label="Sales"
                                 value="12 waiting payments"
                             >
                                 <DollarSign color="white" />
-                            </IconStat>
+                            </IconCard>
                         </Grid.Col>
                         <Grid.Col sm={6} lg={3}>
-                            <IconStat
+                            <IconCard
                                 total="78"
                                 label="Orders"
                                 value="32 shipped"
                                 color="green"
                             >
                                 <ShoppingCart color="white" />
-                            </IconStat>
+                            </IconCard>
                         </Grid.Col>
                         <Grid.Col sm={6} lg={3}>
-                            <IconStat
+                            <IconCard
                                 total="1,352"
                                 label="Members"
                                 value="163 registered today"
                                 color="red"
                             >
                                 <Users color="white" />
-                            </IconStat>
+                            </IconCard>
                         </Grid.Col>
                         <Grid.Col sm={6} lg={3}>
-                            <IconStat
+                            <IconCard
                                 total="132"
                                 label="Comments"
                                 value="16 waiting"
                                 color="yellow"
                             >
                                 <MessageCircle color="white" />
-                            </IconStat>
+                            </IconCard>
                         </Grid.Col>
                     </Grid.Row>
                     <Grid.Row cards deck>
@@ -245,7 +239,7 @@ export const Default = () => {
                     </Grid.Row>
                     <Grid.Row deck cards>
                         <Grid.Col lg={3} sm={6}>
-                            <ChildrenStat
+                            <StatCard
                                 movement={5}
                                 label="Users Online"
                                 total="423"
@@ -253,7 +247,7 @@ export const Default = () => {
                             />
                         </Grid.Col>
                         <Grid.Col lg={3} sm={6}>
-                            <ChildrenStat
+                            <StatCard
                                 movement={5}
                                 label="Users Online"
                                 total="423"
@@ -261,7 +255,7 @@ export const Default = () => {
                             />
                         </Grid.Col>
                         <Grid.Col lg={3} sm={6}>
-                            <ChildrenStat
+                            <StatCard
                                 movement={5}
                                 label="Users Online"
                                 total="423"
@@ -269,7 +263,7 @@ export const Default = () => {
                             />
                         </Grid.Col>
                         <Grid.Col lg={3} sm={6}>
-                            <ChildrenStat
+                            <StatCard
                                 movement={5}
                                 label="Users Online"
                                 total="423"
