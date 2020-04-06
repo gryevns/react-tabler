@@ -1,8 +1,10 @@
 import React from "react";
+import { MemoryRouter as Router, Link } from "react-router-dom";
 import { withKnobs, boolean } from "@storybook/addon-knobs";
 
 import Dropdown from "../Dropdown";
 import Page from "../Page";
+import Tooltip from "../Tooltip";
 import Nav from "../Nav";
 import {
     CheckSquare,
@@ -18,6 +20,14 @@ export default {
     title: "Navigation",
     decorators: [withKnobs],
 };
+
+export const ReactRouter = () => (
+    <Router>
+        <Link to="/test" component={Nav.Link}>
+            Link
+        </Link>
+    </Router>
+);
 
 export const Navigation = () => (
     <Nav

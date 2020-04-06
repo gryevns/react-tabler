@@ -1,7 +1,7 @@
 import React from "react";
 import { Heart } from "react-feather";
 
-import Button from "../Button";
+import Buttons from "../Buttons";
 import Card from "../Card";
 import Tooltip from "../Tooltip";
 
@@ -19,15 +19,15 @@ const placements = [
 export const Placement = () => (
     <Card size="lg">
         <Card.Body>
-            <Button.List>
+            <Buttons.List>
                 {placements.map((placement) => (
                     <Tooltip content="Tooltip Content" placement={placement}>
-                        <button className="btn btn-secondary mb-0">
+                        <Buttons.Button variant="secondary" className="mb-0">
                             Tooltip on {placement}
-                        </button>
+                        </Buttons.Button>
                     </Tooltip>
                 ))}
-            </Button.List>
+            </Buttons.List>
         </Card.Body>
     </Card>
 );

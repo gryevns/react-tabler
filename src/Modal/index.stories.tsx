@@ -1,6 +1,6 @@
 import React from "react";
 
-import Button from "../Button";
+import Buttons from "../Buttons";
 import Modal from "../Modal";
 
 export default {
@@ -18,21 +18,21 @@ export const Active = () => {
                 height: "100vh",
             }}
         >
-            <Button variant="primary" onClick={handleShow}>
+            <Buttons.Button variant="primary" onClick={handleShow}>
                 Show Modal
-            </Button>
+            </Buttons.Button>
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header>Modal header</Modal.Header>
                 <Modal.Body>
                     <p>Modal body text goes here.</p>
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>
+                    <Buttons.Button variant="secondary" onClick={handleClose}>
                         Close
-                    </Button>
-                    <Button variant="primary" onClick={handleClose}>
+                    </Buttons.Button>
+                    <Buttons.Button variant="primary" onClick={handleClose}>
                         Save changes
-                    </Button>
+                    </Buttons.Button>
                 </Modal.Footer>
             </Modal>
         </div>

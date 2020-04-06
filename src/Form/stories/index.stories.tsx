@@ -3,7 +3,7 @@ import { Search, User } from "react-feather";
 
 import Form, { Control } from "../../Form";
 import Grid from "../../Grid";
-import Button from "../../Button";
+import Buttons from "../../Buttons";
 
 export default {
     title: "Form",
@@ -58,9 +58,9 @@ export const Separated = () => (
                 <Control.Input type="text" />
             </Grid.Col>
             <Grid.Col auto>
-                <Button variant="secondary" icon>
+                <Buttons.Button variant="secondary" icon>
                     <Search size={18} />
-                </Button>
+                </Buttons.Button>
             </Grid.Col>
         </Grid.Row>
     </Form>

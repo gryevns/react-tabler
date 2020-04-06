@@ -1,6 +1,7 @@
 import React from "react";
 
 import Progress from "../Progress";
+import Tooltip from "../Tooltip";
 
 export default {
     title: "Progress",

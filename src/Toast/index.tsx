@@ -1,7 +1,7 @@
 import React from "react";
 import cn from "classnames";
 
-import Button from "../Button";
+import Buttons from "../Buttons";
 
 const ToastContext = React.createContext({
     onHide: () => {},
@@ -26,14 +26,14 @@ const ToastHeader = ({ children }: ToastHeaderProps) => {
     return (
         <div className="toast-header">
             {children}
-            <Button
+            <Buttons.Button
                 className="close ml-2 mb-1"
                 data-dismiss="toast"
                 onClick={() => onHide()}
             >
                 <span aria-hidden="true">&times;</span>
                 <span className="sr-only">Close</span>
-            </Button>
+            </Buttons.Button>
         </div>
     );
 };

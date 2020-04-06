@@ -8,42 +8,42 @@ export default {
 };
 
 export const Colors = () =>
-    colors.map(color => (
+    colors.map((color) => (
         <Badge color={color} className="mr-1">
             {color}
         </Badge>
     ));
 
 export const Pill = () =>
-    colors.map(color => (
+    colors.map((color) => (
         <Badge color={color} pill className="mr-1">
             {color}
         </Badge>
     ));
 
 export const Soft = () =>
-    colors.map(color => (
+    colors.map((color) => (
         <Badge color={color} soft className="mr-1">
             {color}
         </Badge>
     ));
 
 export const Link = () =>
-    colors.map(color => (
+    colors.map((color) => (
         <Badge link="#" color={color} className="mr-1">
             {color}
         </Badge>
     ));
 
 export const Empty = () =>
-    colors.map(color => <Badge color={color} className="mr-1" />);
+    colors.map((color) => <Badge color={color} className="mr-1" />);
 
 export const Addons = () => (
     <>
-        <Badge color="green">
+        <Badge color="green" className="mr-1">
             Task<Badge.Addon>Finished</Badge.Addon>
         </Badge>
-        <Badge color="purple">
+        <Badge color="purple" className="mr-1">
             bundle<Badge.Addon>passing</Badge.Addon>
         </Badge>
         <Badge color="red" soft>
@@ -54,13 +54,13 @@ export const Addons = () => (
 
 export const Avatar = () => (
     <>
-        <Badge color="blue">
+        <Badge color="blue" className="mr-1">
             <Badge.Avatar imageURL="https://picsum.photos/id/353/128/128">
                 JL
             </Badge.Avatar>
             Paweł Kuna
         </Badge>
-        <Badge color="blue">
+        <Badge color="red">
             <Badge.Avatar>JL</Badge.Avatar>
             Jeffie Lewzey
         </Badge>
