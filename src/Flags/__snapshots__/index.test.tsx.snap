@@ -8,24 +8,24 @@ exports[`Flag should match country snapshot 1`] = `
 
 exports[`Flag should match size snapshot 1`] = `
 <span
-  className="flag flag-country-gb"
+  className="flag flag-country-gb flag-xl"
 />
 `;
 
 exports[`Flag should match size snapshot 2`] = `
 <span
-  className="flag flag-country-gb"
+  className="flag flag-country-gb flag-lg"
 />
 `;
 
 exports[`Flag should match size snapshot 3`] = `
 <span
-  className="flag flag-country-gb"
+  className="flag flag-country-gb flag-md"
 />
 `;
 
 exports[`Flag should match size snapshot 4`] = `
 <span
-  className="flag flag-country-gb"
+  className="flag flag-country-gb flag-sm"
 />
 `;
