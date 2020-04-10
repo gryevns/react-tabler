@@ -8,9 +8,7 @@ interface ContextState {
     toggleTheme: () => void;
 }
 
-export const ThemeContext = React.createContext({
-    theme: "light",
-} as ContextState);
+export const ThemeContext = React.createContext({ theme: "light" } as ContextState);
 
 const ThemeProvider = ({ children }) => {
     const [theme, setTheme] = React.useState<Theme>("light");

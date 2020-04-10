@@ -18,7 +18,11 @@ const Nav = ({ tabs, fill = false, alt = false }) => {
             {Object.keys(tabs).map(item => {
                 const classes = cn("nav-link", { active: item === active });
                 return (
-                    <li className="nav-item" onClick={() => setActive(item)}>
+                    <li
+                        key={`tab-${item}`}
+                        className="nav-item"
+                        onClick={() => setActive(item)}
+                    >
                         <a className={classes}>{tabs[item].title}</a>
                     </li>
                 );
