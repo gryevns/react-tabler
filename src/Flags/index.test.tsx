@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Flag, { Size } from "./index";
+import Flag from "./index";
 
 describe("Flag", () => {
     it("should match country snapshot", () => {
@@ -9,8 +9,8 @@ describe("Flag", () => {
         expect(wrapper).toMatchSnapshot();
     });
     it("should match size snapshot", () => {
-        ["xl", "lg", "md", "sm"].map((size: Size) => {
-            const wrapper = shallow(<Flag country="gb" />);
+        ["xl" as const, "lg" as const, "md" as const, "sm" as const].map(size => {
+            const wrapper = shallow(<Flag country="gb" size={size} />);
             expect(wrapper).toMatchSnapshot();
         });
     });
