@@ -1,4 +1,5 @@
 import React from "react";
+import Chart from "react-apexcharts";
 import { DollarSign, ShoppingCart, Users, Plus, MessageCircle } from "react-feather";
 
 import Badge from "../Badge";
@@ -21,6 +22,49 @@ import Buttons from "../Buttons";
 
 export default {
     title: "Page",
+};
+
+const ApexChart = ({ type }) => {
+    const state = {
+        options: {
+            chart: {
+                id: "apexchart-example",
+                sparkline: {
+                    enabled: true,
+                },
+            },
+            colors: ["#206bc4"],
+            fill: {
+                colors: type === "area" ? ["#dce7f6"] : ["#206bc4"],
+                opacity: 1,
+                type: "solid",
+            },
+            stoke: {
+                width: 1,
+            },
+            xaxis: {
+                categories: Array.from({ length: 20 }, () =>
+                    Math.floor(Math.random() * 20),
+                ),
+            },
+        },
+        series: [
+            {
+                name: "series",
+                data: Array.from({ length: 20 }, () =>
+                    Math.floor(Math.random() * 20),
+                ),
+            },
+        ],
+    };
+    return (
+        <Chart
+            options={state.options}
+            series={state.series}
+            type={type}
+            height={40}
+        />
+    );
 };
 
 const Projects = () => (
@@ -244,7 +288,10 @@ export const Default = () => {
                                 label="Users Online"
                                 total="423"
                                 color="blue"
-                            />
+                                childrenPosition="outside"
+                            >
+                                <ApexChart type="bar" />
+                            </StatCard>
                         </Grid.Col>
                         <Grid.Col lg={3} sm={6}>
                             <StatCard
@@ -252,7 +299,10 @@ export const Default = () => {
                                 label="Users Online"
                                 total="423"
                                 color="red"
-                            />
+                                childrenPosition="outside"
+                            >
+                                <ApexChart type="area" />
+                            </StatCard>
                         </Grid.Col>
                         <Grid.Col lg={3} sm={6}>
                             <StatCard
@@ -260,7 +310,9 @@ export const Default = () => {
                                 label="Users Online"
                                 total="423"
                                 color="green"
-                            />
+                            >
+                                <ApexChart type="bar" />
+                            </StatCard>
                         </Grid.Col>
                         <Grid.Col lg={3} sm={6}>
                             <StatCard
@@ -268,7 +320,9 @@ export const Default = () => {
                                 label="Users Online"
                                 total="423"
                                 color="yellow"
-                            />
+                            >
+                                <ApexChart type="line" />
+                            </StatCard>
                         </Grid.Col>
                     </Grid.Row>
                     <Grid.Row deck cards>

@@ -8,6 +8,7 @@ export const StatCard = ({
     label = "example",
     color,
     children = null,
+    childrenPosition = "inside",
 }) => {
     const movementString = `${movement}%`;
     const movementColor = !movement ? "yellow" : movement > 0 ? "green" : "red";
@@ -16,17 +17,17 @@ export const StatCard = ({
             <Card.Body>
                 {movement !== undefined && (
                     <div
-                        className={`card-value float-right text-${
-                            color || movementColor
-                        }`}
+                        className={`card-value float-right text-${color ||
+                            movementColor}`}
                     >
                         {movementString}
                     </div>
                 )}
                 <h3 className="mb-1">{total}</h3>
                 <div className="text-muted">{label}</div>
+                {childrenPosition !== "outside" && children}
             </Card.Body>
-            {children}
+            {childrenPosition === "outside" && children}
         </Card>
     );
 };

@@ -3,7 +3,7 @@ import cn from "classnames";
 
 interface ContextState {
     menuVisible: boolean;
-    setMenuVisible: (visible: boolean) => {};
+    setMenuVisible: (visible: boolean) => void;
 }
 
 export const NavContext = React.createContext({
