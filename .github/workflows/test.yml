@@ -13,4 +13,4 @@ jobs:
               with:
                   node-version: "10.x"
             - run: yarn install --dev
-            - run: yarn test
+            - run: yarn test --watchAll=false --ci
