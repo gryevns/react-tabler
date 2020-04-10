@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Carousel should match types snapshot 1`] = `
+<div
+  className="carousel slide"
+  data-ride="carousel"
+>
+  <ol
+    className="carousel-indicators"
+  >
+    <li
+      className="active"
+      key="indicator-0"
+      onClick={[Function]}
+    />
+    <li
+      className=""
+      key="indicator-1"
+      onClick={[Function]}
+    />
+  </ol>
+  <div
+    className="carousel-inner"
+  >
+    <CarouselItem
+      active={true}
+      key="first"
+      src="first"
+    >
+      <h3>
+        First slide label
+      </h3>
+      <p>
+        Nulla vitae elit libero, a pharetra augue mollis interdum.
+      </p>
+    </CarouselItem>
+    <CarouselItem
+      active={false}
+      key="second"
+      src="second"
+    >
+      <h3>
+        Second slide label
+      </h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
+    </CarouselItem>
+  </div>
+  <a
+    className="carousel-control-prev"
+    href="#"
+    onClick={[Function]}
+    role="button"
+  >
+    <span
+      aria-hidden="true"
+      className="carousel-control-prev-icon"
+    />
+    <span
+      className="sr-only"
+    >
+      Previous
+    </span>
+  </a>
+  <a
+    className="carousel-control-next"
+    href="#"
+    onClick={[Function]}
+    role="button"
+  >
+    <span
+      aria-hidden="true"
+      className="carousel-control-next-icon"
+    />
+    <span
+      className="sr-only"
+    >
+      Next
+    </span>
+  </a>
+</div>
+`;

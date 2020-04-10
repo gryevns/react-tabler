@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Progress should match in snapshot 1`] = `
+<div
+  aria-valuemax={100}
+  aria-valuemin={0}
+  aria-valuenow={0}
+  className="progress-bar bg-red progress-bar-indeterminate"
+  role="progressbar"
+  style={
+    Object {
+      "width": "0%",
+    }
+  }
+>
+  <span
+    className="sr-only"
+  >
+    0
+    % Complete
+  </span>
+</div>
+`;
+
+exports[`Progress should match snapshot 1`] = `
+<div
+  className="progress progress-md"
+>
+  <ProgressBar
+    width={66}
+  />
+</div>
+`;

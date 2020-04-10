@@ -1,0 +1,128 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Badge should match addon snapshot 1`] = `
+<span
+  className="badge bg-green"
+>
+  Task
+  <Addon>
+    Finished
+  </Addon>
+</span>
+`;
+
+exports[`Badge should match avatar snapshot 1`] = `
+<span
+  className="badge bg-blue"
+>
+  <Avatar
+    imageURL="https://picsum.photos/id/353/128/128"
+  >
+    JL
+  </Avatar>
+  ABC DEF
+</span>
+`;
+
+exports[`Badge should match color snapshot 1`] = `
+<span
+  className="badge bg-blue"
+/>
+`;
+
+exports[`Badge should match color snapshot 2`] = `
+<span
+  className="badge bg-azure"
+/>
+`;
+
+exports[`Badge should match color snapshot 3`] = `
+<span
+  className="badge bg-indigo"
+/>
+`;
+
+exports[`Badge should match color snapshot 4`] = `
+<span
+  className="badge bg-purple"
+/>
+`;
+
+exports[`Badge should match color snapshot 5`] = `
+<span
+  className="badge bg-pink"
+/>
+`;
+
+exports[`Badge should match color snapshot 6`] = `
+<span
+  className="badge bg-red"
+/>
+`;
+
+exports[`Badge should match color snapshot 7`] = `
+<span
+  className="badge bg-orange"
+/>
+`;
+
+exports[`Badge should match color snapshot 8`] = `
+<span
+  className="badge bg-yellow"
+/>
+`;
+
+exports[`Badge should match color snapshot 9`] = `
+<span
+  className="badge bg-lime"
+/>
+`;
+
+exports[`Badge should match color snapshot 10`] = `
+<span
+  className="badge bg-green"
+/>
+`;
+
+exports[`Badge should match color snapshot 11`] = `
+<span
+  className="badge bg-teal"
+/>
+`;
+
+exports[`Badge should match color snapshot 12`] = `
+<span
+  className="badge bg-cyan"
+/>
+`;
+
+exports[`Badge should match color snapshot 13`] = `
+<span
+  className="badge bg-gray"
+/>
+`;
+
+exports[`Badge should match empty snapshot 1`] = `
+<span
+  className="badge"
+/>
+`;
+
+exports[`Badge should match link snapshot 1`] = `
+<a
+  className="badge"
+  href="https://www.test.com"
+/>
+`;
+
+exports[`Badge should match pill snapshot 1`] = `
+<span
+  className="badge badge-pill"
+/>
+`;
+
+exports[`Badge should match soft snapshot 1`] = `
+<span
+  className="badge"
+/>
+`;

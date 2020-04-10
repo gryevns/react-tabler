@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Steps should match active step snapshot 1`] = `
+<a
+  className="step-item active"
+>
+  Step 1
+</a>
+`;
+
+exports[`Steps should match step snapshot 1`] = `
+<a
+  className="step-item"
+>
+  Step 1
+</a>
+`;
+
+exports[`Steps should match steps snapshot 1`] = `
+<div
+  className="steps steps-red"
+>
+  <ForwardRef>
+    Step 1
+  </ForwardRef>
+  <ForwardRef
+    active={true}
+  >
+    Step 2
+  </ForwardRef>
+  <ForwardRef>
+    Step 3
+  </ForwardRef>
+  <ForwardRef>
+    Step 4
+  </ForwardRef>
+</div>
+`;

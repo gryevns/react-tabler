@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Flag should match country snapshot 1`] = `
+<span
+  className="flag flag-country-gb"
+/>
+`;
+
+exports[`Flag should match size snapshot 1`] = `
+<span
+  className="flag flag-country-gb"
+/>
+`;
+
+exports[`Flag should match size snapshot 2`] = `
+<span
+  className="flag flag-country-gb"
+/>
+`;
+
+exports[`Flag should match size snapshot 3`] = `
+<span
+  className="flag flag-country-gb"
+/>
+`;
+
+exports[`Flag should match size snapshot 4`] = `
+<span
+  className="flag flag-country-gb"
+/>
+`;

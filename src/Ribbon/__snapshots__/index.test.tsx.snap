@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Ribbon should match bookmark snapshot 1`] = `
+<div
+  className="ribbon ribbon-bookmark"
+/>
+`;
+
+exports[`Ribbon should match bottom snapshot 1`] = `
+<div
+  className="ribbon ribbon-bottom"
+/>
+`;
+
+exports[`Ribbon should match color snapshot 1`] = `
+<div
+  className="ribbon bg-blue"
+/>
+`;
+
+exports[`Ribbon should match color snapshot 2`] = `
+<div
+  className="ribbon bg-azure"
+/>
+`;
+
+exports[`Ribbon should match color snapshot 3`] = `
+<div
+  className="ribbon bg-indigo"
+/>
+`;
+
+exports[`Ribbon should match color snapshot 4`] = `
+<div
+  className="ribbon bg-purple"
+/>
+`;
+
+exports[`Ribbon should match color snapshot 5`] = `
+<div
+  className="ribbon bg-pink"
+/>
+`;
+
+exports[`Ribbon should match color snapshot 6`] = `
+<div
+  className="ribbon bg-red"
+/>
+`;
+
+exports[`Ribbon should match color snapshot 7`] = `
+<div
+  className="ribbon bg-orange"
+/>
+`;
+
+exports[`Ribbon should match color snapshot 8`] = `
+<div
+  className="ribbon bg-yellow"
+/>
+`;
+
+exports[`Ribbon should match color snapshot 9`] = `
+<div
+  className="ribbon bg-lime"
+/>
+`;
+
+exports[`Ribbon should match color snapshot 10`] = `
+<div
+  className="ribbon bg-green"
+/>
+`;
+
+exports[`Ribbon should match color snapshot 11`] = `
+<div
+  className="ribbon bg-teal"
+/>
+`;
+
+exports[`Ribbon should match color snapshot 12`] = `
+<div
+  className="ribbon bg-cyan"
+/>
+`;
+
+exports[`Ribbon should match color snapshot 13`] = `
+<div
+  className="ribbon bg-gray"
+/>
+`;
+
+exports[`Ribbon should match left snapshot 1`] = `
+<div
+  className="ribbon ribbon-left"
+/>
+`;
+
+exports[`Ribbon should match right snapshot 1`] = `
+<div
+  className="ribbon ribbon-right"
+/>
+`;
+
+exports[`Ribbon should match top snapshot 1`] = `
+<div
+  className="ribbon ribbon-top"
+/>
+`;

@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Breadcrumb should match types snapshot 1`] = `
+<ol
+  aria-label="breadcrumbs"
+  className="breadcrumb"
+>
+  <BreadcrumbItem>
+    <a
+      href="#"
+    >
+      Home
+    </a>
+  </BreadcrumbItem>
+  <BreadcrumbItem>
+    <a
+      href="#"
+    >
+      Library
+    </a>
+  </BreadcrumbItem>
+</ol>
+`;
+
+exports[`Breadcrumb should match types snapshot 2`] = `
+<ol
+  aria-label="breadcrumbs"
+  className="breadcrumb breadcrumb-dots"
+>
+  <BreadcrumbItem>
+    <a
+      href="#"
+    >
+      Home
+    </a>
+  </BreadcrumbItem>
+  <BreadcrumbItem>
+    <a
+      href="#"
+    >
+      Library
+    </a>
+  </BreadcrumbItem>
+</ol>
+`;
+
+exports[`Breadcrumb should match types snapshot 3`] = `
+<ol
+  aria-label="breadcrumbs"
+  className="breadcrumb breadcrumb-arrows"
+>
+  <BreadcrumbItem>
+    <a
+      href="#"
+    >
+      Home
+    </a>
+  </BreadcrumbItem>
+  <BreadcrumbItem>
+    <a
+      href="#"
+    >
+      Library
+    </a>
+  </BreadcrumbItem>
+</ol>
+`;
+
+exports[`Breadcrumb should match types snapshot 4`] = `
+<ol
+  aria-label="breadcrumbs"
+  className="breadcrumb breadcrumb-bullets"
+>
+  <BreadcrumbItem>
+    <a
+      href="#"
+    >
+      Home
+    </a>
+  </BreadcrumbItem>
+  <BreadcrumbItem>
+    <a
+      href="#"
+    >
+      Library
+    </a>
+  </BreadcrumbItem>
+</ol>
+`;

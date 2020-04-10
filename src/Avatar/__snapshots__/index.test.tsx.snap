@@ -1,0 +1,289 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Avatar should match color snapshot 1`] = `
+<span
+  className="avatar undefined bg-blue-lt"
+/>
+`;
+
+exports[`Avatar should match color snapshot 2`] = `
+<span
+  className="avatar undefined bg-azure-lt"
+/>
+`;
+
+exports[`Avatar should match color snapshot 3`] = `
+<span
+  className="avatar undefined bg-indigo-lt"
+/>
+`;
+
+exports[`Avatar should match color snapshot 4`] = `
+<span
+  className="avatar undefined bg-purple-lt"
+/>
+`;
+
+exports[`Avatar should match color snapshot 5`] = `
+<span
+  className="avatar undefined bg-pink-lt"
+/>
+`;
+
+exports[`Avatar should match color snapshot 6`] = `
+<span
+  className="avatar undefined bg-red-lt"
+/>
+`;
+
+exports[`Avatar should match color snapshot 7`] = `
+<span
+  className="avatar undefined bg-orange-lt"
+/>
+`;
+
+exports[`Avatar should match color snapshot 8`] = `
+<span
+  className="avatar undefined bg-yellow-lt"
+/>
+`;
+
+exports[`Avatar should match color snapshot 9`] = `
+<span
+  className="avatar undefined bg-lime-lt"
+/>
+`;
+
+exports[`Avatar should match color snapshot 10`] = `
+<span
+  className="avatar undefined bg-green-lt"
+/>
+`;
+
+exports[`Avatar should match color snapshot 11`] = `
+<span
+  className="avatar undefined bg-teal-lt"
+/>
+`;
+
+exports[`Avatar should match color snapshot 12`] = `
+<span
+  className="avatar undefined bg-cyan-lt"
+/>
+`;
+
+exports[`Avatar should match color snapshot 13`] = `
+<span
+  className="avatar undefined bg-gray-lt"
+/>
+`;
+
+exports[`Avatar should match list snapshot 1`] = `
+<div
+  className="avatar-list"
+>
+  <Component>
+    1
+  </Component>
+  <Component>
+    2
+  </Component>
+</div>
+`;
+
+exports[`Avatar should match shape snapshot 1`] = `
+<span
+  className="avatar "
+/>
+`;
+
+exports[`Avatar should match shape snapshot 2`] = `
+<span
+  className="avatar rounded"
+/>
+`;
+
+exports[`Avatar should match shape snapshot 3`] = `
+<span
+  className="avatar rounded-circle"
+/>
+`;
+
+exports[`Avatar should match shape snapshot 4`] = `
+<span
+  className="avatar rounded-0"
+/>
+`;
+
+exports[`Avatar should match shape snapshot 5`] = `
+<span
+  className="avatar rounded-lg"
+/>
+`;
+
+exports[`Avatar should match size snapshot 1`] = `
+<span
+  className="avatar undefined avatar-sm"
+/>
+`;
+
+exports[`Avatar should match size snapshot 2`] = `
+<span
+  className="avatar undefined avatar-md"
+/>
+`;
+
+exports[`Avatar should match size snapshot 3`] = `
+<span
+  className="avatar undefined avatar-lg"
+/>
+`;
+
+exports[`Avatar should match size snapshot 4`] = `
+<span
+  className="avatar undefined avatar-xl"
+/>
+`;
+
+exports[`Avatar should match stacked snapshot 1`] = `
+<div
+  className="avatar-list avatar-list-stacked"
+>
+  <Component>
+    1
+  </Component>
+  <Component>
+    2
+  </Component>
+</div>
+`;
+
+exports[`Avatar should match status snapshot 1`] = `
+<span
+  className="avatar undefined"
+>
+  <span
+    className="badge bg-blue"
+  />
+</span>
+`;
+
+exports[`Avatar should match status snapshot 2`] = `
+<span
+  className="avatar undefined"
+>
+  <span
+    className="badge bg-azure"
+  />
+</span>
+`;
+
+exports[`Avatar should match status snapshot 3`] = `
+<span
+  className="avatar undefined"
+>
+  <span
+    className="badge bg-indigo"
+  />
+</span>
+`;
+
+exports[`Avatar should match status snapshot 4`] = `
+<span
+  className="avatar undefined"
+>
+  <span
+    className="badge bg-purple"
+  />
+</span>
+`;
+
+exports[`Avatar should match status snapshot 5`] = `
+<span
+  className="avatar undefined"
+>
+  <span
+    className="badge bg-pink"
+  />
+</span>
+`;
+
+exports[`Avatar should match status snapshot 6`] = `
+<span
+  className="avatar undefined"
+>
+  <span
+    className="badge bg-red"
+  />
+</span>
+`;
+
+exports[`Avatar should match status snapshot 7`] = `
+<span
+  className="avatar undefined"
+>
+  <span
+    className="badge bg-orange"
+  />
+</span>
+`;
+
+exports[`Avatar should match status snapshot 8`] = `
+<span
+  className="avatar undefined"
+>
+  <span
+    className="badge bg-yellow"
+  />
+</span>
+`;
+
+exports[`Avatar should match status snapshot 9`] = `
+<span
+  className="avatar undefined"
+>
+  <span
+    className="badge bg-lime"
+  />
+</span>
+`;
+
+exports[`Avatar should match status snapshot 10`] = `
+<span
+  className="avatar undefined"
+>
+  <span
+    className="badge bg-green"
+  />
+</span>
+`;
+
+exports[`Avatar should match status snapshot 11`] = `
+<span
+  className="avatar undefined"
+>
+  <span
+    className="badge bg-teal"
+  />
+</span>
+`;
+
+exports[`Avatar should match status snapshot 12`] = `
+<span
+  className="avatar undefined"
+>
+  <span
+    className="badge bg-cyan"
+  />
+</span>
+`;
+
+exports[`Avatar should match status snapshot 13`] = `
+<span
+  className="avatar undefined"
+>
+  <span
+    className="badge bg-gray"
+  />
+</span>
+`;

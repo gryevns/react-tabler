@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Toast should match body snapshot 1`] = `
+<div
+  className="toast-body"
+>
+  body
+</div>
+`;
+
+exports[`Toast should match header snapshot 1`] = `
+<div
+  className="toast-header"
+>
+  <ToastTitle>
+    title
+  </ToastTitle>
+  <ForwardRef
+    className="close ml-2 mb-1"
+    data-dismiss="toast"
+    onClick={[Function]}
+  >
+    <span
+      aria-hidden="true"
+    >
+      ×
+    </span>
+    <span
+      className="sr-only"
+    >
+      Close
+    </span>
+  </ForwardRef>
+</div>
+`;
+
+exports[`Toast should match title snapshot 1`] = `
+<strong
+  className="mr-auto"
+>
+  title
+</strong>
+`;
+
+exports[`Toast should match toast snapshot 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "onHide": [Function],
+    }
+  }
+>
+  <div
+    aria-atomic="true"
+    aria-live="assertive"
+    className="toast show"
+    role="alert"
+  >
+    <ToastHeader>
+      <ToastTitle>
+        title
+      </ToastTitle>
+    </ToastHeader>
+    <ToastBody>
+      body
+    </ToastBody>
+  </div>
+</ContextProvider>
+`;

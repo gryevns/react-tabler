@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Alert should match variant snapshot 1`] = `
+<div
+  className="alert alert-primary alert-dismissible"
+  role="alert"
+>
+  <a
+    aria-label="close"
+    className="close"
+    data-dismiss="alert"
+    href="#"
+    onClick={[Function]}
+  >
+    ×
+  </a>
+  Content
+</div>
+`;
+
+exports[`Alert should match variant snapshot 2`] = `
+<div
+  className="alert alert-secondary alert-dismissible"
+  role="alert"
+>
+  <a
+    aria-label="close"
+    className="close"
+    data-dismiss="alert"
+    href="#"
+    onClick={[Function]}
+  >
+    ×
+  </a>
+  Content
+</div>
+`;
+
+exports[`Alert should match variant snapshot 3`] = `
+<div
+  className="alert alert-success alert-dismissible"
+  role="alert"
+>
+  <a
+    aria-label="close"
+    className="close"
+    data-dismiss="alert"
+    href="#"
+    onClick={[Function]}
+  >
+    ×
+  </a>
+  Content
+</div>
+`;
+
+exports[`Alert should match variant snapshot 4`] = `
+<div
+  className="alert alert-info alert-dismissible"
+  role="alert"
+>
+  <a
+    aria-label="close"
+    className="close"
+    data-dismiss="alert"
+    href="#"
+    onClick={[Function]}
+  >
+    ×
+  </a>
+  Content
+</div>
+`;
+
+exports[`Alert should match variant snapshot 5`] = `
+<div
+  className="alert alert-warning alert-dismissible"
+  role="alert"
+>
+  <a
+    aria-label="close"
+    className="close"
+    data-dismiss="alert"
+    href="#"
+    onClick={[Function]}
+  >
+    ×
+  </a>
+  Content
+</div>
+`;
+
+exports[`Alert should match variant snapshot 6`] = `
+<div
+  className="alert alert-danger alert-dismissible"
+  role="alert"
+>
+  <a
+    aria-label="close"
+    className="close"
+    data-dismiss="alert"
+    href="#"
+    onClick={[Function]}
+  >
+    ×
+  </a>
+  Content
+</div>
+`;

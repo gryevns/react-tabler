@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal should match snapshot 1`] = `
+<Modal
+  onHide={[MockFunction]}
+  show={true}
+>
+  <div
+    aria-modal={true}
+    className="modal modal-blur"
+    role="dialog"
+    style={
+      Object {
+        "display": "block",
+      }
+    }
+  >
+    <div
+      className="modal-dialog"
+      role="document"
+    >
+      <div
+        className="modal-content"
+      >
+        <ModalHeader>
+          <div
+            className="modal-header"
+          >
+            <div
+              className="modal-title h4"
+            >
+              Modal header
+            </div>
+            <button
+              className="close"
+              onClick={[MockFunction]}
+              type="button"
+            >
+              <span
+                aria-hidden="true"
+              >
+                ×
+              </span>
+              <span
+                className="sr-only"
+              >
+                Close
+              </span>
+            </button>
+          </div>
+        </ModalHeader>
+        <ModalBody>
+          <div
+            className="modal-body"
+          >
+            <p>
+              Modal body text goes here.
+            </p>
+          </div>
+        </ModalBody>
+      </div>
+    </div>
+  </div>
+</Modal>
+`;

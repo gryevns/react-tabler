@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Grid should match snapshot 1`] = `
+<div
+  className="row"
+>
+  <Col>
+    1 of 2
+  </Col>
+  <Col>
+    2 of 2
+  </Col>
+</div>
+`;

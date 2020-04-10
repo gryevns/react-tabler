@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Timeline should match simple snapshot 1`] = `
+<ul
+  className="list list-timeline list-timeline-simple"
+>
+  <TimelineItem>
+    <TimelineIcon
+      className="bg-twitter"
+    >
+      icon
+    </TimelineIcon>
+    <TimelineContent>
+      <TimelineTime>
+        10 hrs ago
+      </TimelineTime>
+      <TimelineTitle>
+        +1150 Followers
+      </TimelineTitle>
+      You’re getting more and more followers, keep it up!
+    </TimelineContent>
+  </TimelineItem>
+</ul>
+`;
+
+exports[`Timeline should match snapshot 1`] = `
+<ul
+  className="list list-timeline"
+>
+  <TimelineItem>
+    <TimelineIcon
+      className="bg-twitter"
+    >
+      icon
+    </TimelineIcon>
+    <TimelineContent>
+      <TimelineTime>
+        10 hrs ago
+      </TimelineTime>
+      <TimelineTitle>
+        +1150 Followers
+      </TimelineTitle>
+      You’re getting more and more followers, keep it up!
+    </TimelineContent>
+  </TimelineItem>
+</ul>
+`;
