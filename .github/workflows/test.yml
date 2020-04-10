@@ -13,6 +13,6 @@ jobs:
               with:
                   node-version: "11.x"
             - run: yarn install --dev
-            - run: yarn test --watchAll=false
+            - run: yarn test:once
               env:
                   CI: true
