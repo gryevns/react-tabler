@@ -11,6 +11,8 @@ jobs:
             - name: Setup node
               uses: actions/setup-node@v1
               with:
-                  node-version: "10.x"
+                  node-version: "11.x"
             - run: yarn install --dev
-            - run: yarn test --watchAll=false --ci
+            - run: yarn test --watchAll=false
+              env:
+                  CI: true
