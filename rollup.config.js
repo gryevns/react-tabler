@@ -53,14 +53,14 @@ export default {
             insert: true,
         }),
         postcss({
-            extract: path.resolve("build/css/tabler.css"),
+            extract: path.resolve("dist/css/tabler.css"),
         }),
         copy({
             targets: [
-                { src: "src/static/img/logo.svg", dest: "build/img" },
-                { src: "src/static/img/logo-small-white.svg", dest: "build/img" },
-                { src: "src/static/img/flags/*", dest: "build/img/flags" },
-                { src: "src/static/img/payments/*", dest: "build/img/payments" },
+                { src: "src/static/img/logo.svg", dest: "dist/img" },
+                { src: "src/static/img/logo-small-white.svg", dest: "dist/img" },
+                { src: "src/static/img/flags/*", dest: "dist/img/flags" },
+                { src: "src/static/img/payments/*", dest: "dist/img/payments" },
             ],
         }),
         multi(),
