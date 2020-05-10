@@ -23,9 +23,3 @@ exports[`Flag should match size snapshot 3`] = `
   className="flag flag-country-gb flag-md"
 />
 `;
-
-exports[`Flag should match size snapshot 4`] = `
-<span
-  className="flag flag-country-gb flag-sm"
-/>
-`;

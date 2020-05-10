@@ -1,34 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Dropdown should match link snapshot 1`] = `
-<ContextProvider
-  value={
-    Object {
-      "dropdownVisible": false,
-      "setDropdownVisible": [Function],
-    }
-  }
->
-  <div
-    className="dropdown"
-  >
-    <DropdownLink>
-      Click Me! 
-    </DropdownLink>
-    <DropdownMenu
-      arrow={true}
-    >
-      <DropdownItem>
-        Dropdown link
-      </DropdownItem>
-      <DropdownItem>
-        Dropdown link
-      </DropdownItem>
-    </DropdownMenu>
-  </div>
-</ContextProvider>
-`;
-
 exports[`Dropdown should match snapshot 1`] = `
 <ContextProvider
   value={
