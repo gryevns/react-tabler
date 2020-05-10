@@ -19,4 +19,5 @@ describe("Modal", () => {
         wrapper.find("button.close").simulate("click");
         expect(handleClose).toHaveBeenCalled();
     });
+    // TODO
 });

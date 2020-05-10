@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should match active snapshot 1`] = `
+<div
+  className="card card-active"
+>
+  <CardBody>
+    Test
+  </CardBody>
+</div>
+`;
+
+exports[`Card should match active snapshot 2`] = `
+<div
+  className="card"
+>
+  <CardBody>
+    Test
+  </CardBody>
+</div>
+`;
+
+exports[`Card should match group snapshot 1`] = `
+<div
+  className="card-group"
+>
+  <Component
+    inactive={true}
+  >
+    <CardBody>
+      First card
+    </CardBody>
+  </Component>
+  <Component
+    active={true}
+  >
+    <CardBody>
+      Second card
+    </CardBody>
+  </Component>
+</div>
+`;
+
+exports[`Card should match loading snapshot 1`] = `
+<div
+  className="card-body"
+>
+  <Loading />
+</div>
+`;
+
+exports[`Card should match size snapshot 1`] = `
+<div
+  className="card card-sm"
+>
+  <CardBody>
+    This is some text within a card body.
+  </CardBody>
+</div>
+`;
+
+exports[`Card should match size snapshot 2`] = `
+<div
+  className="card"
+>
+  <CardBody>
+    This is some text within a card body.
+  </CardBody>
+</div>
+`;
+
+exports[`Card should match size snapshot 3`] = `
+<div
+  className="card card-md"
+>
+  <CardBody>
+    This is some text within a card body.
+  </CardBody>
+</div>
+`;
+
+exports[`Card should match size snapshot 4`] = `
+<div
+  className="card card-lg"
+>
+  <CardBody>
+    This is some text within a card body.
+  </CardBody>
+</div>
+`;
+
+exports[`Card should match snapshot 1`] = `
+<div
+  className="card"
+>
+  <CardHeader>
+    <Component>
+      Card title
+    </Component>
+  </CardHeader>
+  <CardBody>
+    <p>
+      This is some text within a card body.
+    </p>
+  </CardBody>
+</div>
+`;
+
+exports[`Card should match stacked snapshot 1`] = `
+<div
+  className="card card-stacked"
+/>
+`;
+
+exports[`Card should match status snaphost 1`] = `
+<div
+  className="card-status bg-purple card-status-top"
+/>
+`;
+
+exports[`Card should match status snaphost 2`] = `
+<div
+  className="card-status bg-purple card-status-bottom"
+/>
+`;
+
+exports[`Card should match status snaphost 3`] = `
+<div
+  className="card-status bg-purple card-status-left"
+/>
+`;

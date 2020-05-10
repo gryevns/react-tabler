@@ -1,6 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Grid should match snapshot 1`] = `
+exports[`Grid should match col snapshot 1`] = `
+<div
+  className="col"
+>
+  test
+</div>
+`;
+
+exports[`Grid should match grid snapshot 1`] = `
 <div
   className="row"
 >

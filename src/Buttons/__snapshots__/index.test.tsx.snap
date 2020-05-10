@@ -1,0 +1,314 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Buttons should match anchor snapshot 1`] = `
+<a
+  className="btn"
+>
+  Test
+</a>
+`;
+
+exports[`Buttons should match button snapshot 1`] = `
+<button
+  className="btn"
+>
+  Test
+</button>
+`;
+
+exports[`Buttons should match color snaphot 1`] = `
+<button
+  className="btn btn-blue"
+  color="blue"
+>
+  blue
+</button>
+`;
+
+exports[`Buttons should match color snaphot 2`] = `
+<button
+  className="btn btn-azure"
+  color="azure"
+>
+  azure
+</button>
+`;
+
+exports[`Buttons should match color snaphot 3`] = `
+<button
+  className="btn btn-indigo"
+  color="indigo"
+>
+  indigo
+</button>
+`;
+
+exports[`Buttons should match color snaphot 4`] = `
+<button
+  className="btn btn-purple"
+  color="purple"
+>
+  purple
+</button>
+`;
+
+exports[`Buttons should match color snaphot 5`] = `
+<button
+  className="btn btn-pink"
+  color="pink"
+>
+  pink
+</button>
+`;
+
+exports[`Buttons should match color snaphot 6`] = `
+<button
+  className="btn btn-red"
+  color="red"
+>
+  red
+</button>
+`;
+
+exports[`Buttons should match color snaphot 7`] = `
+<button
+  className="btn btn-orange"
+  color="orange"
+>
+  orange
+</button>
+`;
+
+exports[`Buttons should match color snaphot 8`] = `
+<button
+  className="btn btn-yellow"
+  color="yellow"
+>
+  yellow
+</button>
+`;
+
+exports[`Buttons should match color snaphot 9`] = `
+<button
+  className="btn btn-lime"
+  color="lime"
+>
+  lime
+</button>
+`;
+
+exports[`Buttons should match color snaphot 10`] = `
+<button
+  className="btn btn-green"
+  color="green"
+>
+  green
+</button>
+`;
+
+exports[`Buttons should match color snaphot 11`] = `
+<button
+  className="btn btn-teal"
+  color="teal"
+>
+  teal
+</button>
+`;
+
+exports[`Buttons should match color snaphot 12`] = `
+<button
+  className="btn btn-cyan"
+  color="cyan"
+>
+  cyan
+</button>
+`;
+
+exports[`Buttons should match color snaphot 13`] = `
+<button
+  className="btn btn-gray"
+  color="gray"
+>
+  gray
+</button>
+`;
+
+exports[`Buttons should match disabled snapshot 1`] = `
+<button
+  className="btn disabled"
+  disabled={true}
+>
+  Test
+</button>
+`;
+
+exports[`Buttons should match ghost snapshot 1`] = `
+<button
+  className="btn btn-ghost-undefined"
+  ghost={true}
+>
+  Test
+</button>
+`;
+
+exports[`Buttons should match icon snapshot 1`] = `
+<button
+  className="btn btn-icon"
+  icon={true}
+>
+  Icon
+</button>
+`;
+
+exports[`Buttons should match input snapshot 1`] = `
+<input
+  className="btn"
+  type="button"
+>
+  Test
+</input>
+`;
+
+exports[`Buttons should match loading snapshot 1`] = `
+<button
+  className="btn btn-loading"
+  loading={true}
+>
+  Test
+</button>
+`;
+
+exports[`Buttons should match outline snapshot 1`] = `
+<button
+  className="btn"
+  outline={true}
+>
+  Test
+</button>
+`;
+
+exports[`Buttons should match pill snapshot 1`] = `
+<button
+  className="btn btn-pill"
+  pill={true}
+>
+  Test
+</button>
+`;
+
+exports[`Buttons should match sizes snapshot 1`] = `
+<button
+  className="btn btn-sm"
+  size="sm"
+>
+  sm
+</button>
+`;
+
+exports[`Buttons should match sizes snapshot 2`] = `
+<button
+  className="btn btn-md"
+  size="md"
+>
+  md
+</button>
+`;
+
+exports[`Buttons should match sizes snapshot 3`] = `
+<button
+  className="btn btn-lg"
+  size="lg"
+>
+  lg
+</button>
+`;
+
+exports[`Buttons should match square snapshot 1`] = `
+<button
+  className="btn btn-square"
+  square={true}
+>
+  Test
+</button>
+`;
+
+exports[`Buttons should match variant snapshot 1`] = `
+<button
+  className="btn btn-primary"
+  variant="primary"
+>
+  primary
+</button>
+`;
+
+exports[`Buttons should match variant snapshot 2`] = `
+<button
+  className="btn btn-secondary"
+  variant="secondary"
+>
+  secondary
+</button>
+`;
+
+exports[`Buttons should match variant snapshot 3`] = `
+<button
+  className="btn btn-success"
+  variant="success"
+>
+  success
+</button>
+`;
+
+exports[`Buttons should match variant snapshot 4`] = `
+<button
+  className="btn btn-info"
+  variant="info"
+>
+  info
+</button>
+`;
+
+exports[`Buttons should match variant snapshot 5`] = `
+<button
+  className="btn btn-warning"
+  variant="warning"
+>
+  warning
+</button>
+`;
+
+exports[`Buttons should match variant snapshot 6`] = `
+<button
+  className="btn btn-danger"
+  variant="danger"
+>
+  danger
+</button>
+`;
+
+exports[`Buttons should match variant snapshot 7`] = `
+<button
+  className="btn btn-light"
+  variant="light"
+>
+  light
+</button>
+`;
+
+exports[`Buttons should match variant snapshot 8`] = `
+<button
+  className="btn btn-dark"
+  variant="dark"
+>
+  dark
+</button>
+`;
+
+exports[`Buttons should match variant snapshot 9`] = `
+<button
+  className="btn btn-link"
+  variant="link"
+>
+  link
+</button>
+`;
