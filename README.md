@@ -9,7 +9,7 @@ Check out [the storybook](https://gryevns.github.io/react-tabler/) for examples 
 Examples use [react-feather](https://github.com/feathericons/react-feather) icons but you can choose to install your favourite icon set.
 
 ```
-import "retabler/build/css/tabler.css";
+import "retabler/dist/css/tabler.css";
 import { Card } from "retabler";
 
 const Example = () => (
