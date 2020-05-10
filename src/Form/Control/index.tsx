@@ -1,7 +1,7 @@
 import React from "react";
 import cn from "classnames";
 
-export interface ControlFeedbackProps {
+interface ControlFeedbackProps {
     children: React.ReactNode;
 }
 
@@ -9,7 +9,7 @@ const ControlFeedback = ({ children }: ControlFeedbackProps) => (
     <div className="invalid-feedback">{children}</div>
 );
 
-export interface ControlGroupProps {
+interface ControlGroupProps {
     children: React.ReactNode;
     className?: string;
     inline?: boolean;
@@ -30,8 +30,7 @@ const ControlGroup = ({
     return <label className={classes}>{children}</label>;
 };
 
-export interface ControlSelectProps
-    extends React.InputHTMLAttributes<HTMLSelectElement> {
+interface ControlSelectProps extends React.InputHTMLAttributes<HTMLSelectElement> {
     className?: string;
 }
 
@@ -49,7 +48,7 @@ const ControlSelect = React.forwardRef(
     },
 );
 
-export interface ControlTextareaProps
+interface ControlTextareaProps
     extends React.InputHTMLAttributes<HTMLTextAreaElement> {
     className?: string;
 }
@@ -64,7 +63,7 @@ const ControlTextarea = React.forwardRef(
     },
 );
 
-export interface ControlLabelProps {
+interface ControlLabelProps {
     children: React.ReactNode;
     className?: string;
 }
@@ -74,7 +73,7 @@ const ControlLabel = ({ children, className }: ControlLabelProps) => {
     return <div className={classes}>{children}</div>;
 };
 
-export interface ControlAddonProps {
+interface ControlAddonProps {
     children: React.ReactNode;
 }
 
@@ -82,7 +81,7 @@ const ControlAddon = ({ children }: ControlAddonProps) => (
     <span className="input-icon-addon">{children}</span>
 );
 
-export interface ControlIconProps {
+interface ControlIconProps {
     children: React.ReactNode;
     className?: string;
 }
@@ -92,13 +91,13 @@ const ControlIcon = ({ children, className }: ControlIconProps) => {
     return <div className={classes}>{children}</div>;
 };
 
-export interface ControlProps extends React.InputHTMLAttributes<HTMLInputElement> {
+interface ControlProps extends React.InputHTMLAttributes<HTMLInputElement> {
     className?: string;
     rounded?: boolean;
     flush?: boolean;
     valid?: boolean;
     outline?: boolean;
-    // size?: "sm" | "md" | "lg";
+    padding?: "sm" | "md" | "lg";
     style?: React.CSSProperties;
 }
 
@@ -125,15 +124,14 @@ const ControlInput = React.forwardRef(
             "is-valid": valid === true,
             "is-invalid": valid === false,
             "is-valid-lite": outline === false,
-            // "form-control-color": type === "color",
-            // [`form-control-${size}`]: !!size,
+            [`form-control-${props.padding}`]: !!props.padding,
         };
         const classes = cn(controlClassName(), options, className);
         return <input ref={ref} {...props} className={classes} />;
     },
 );
 
-const Control = () => {};
+export const Control = () => {};
 
 Control.Input = ControlInput;
 Control.Textarea = ControlTextarea;

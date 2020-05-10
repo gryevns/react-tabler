@@ -10,7 +10,7 @@ export default {
 };
 
 export const Variants = () =>
-    variants.map((variant) => (
+    variants.map(variant => (
         <Alert variant={variant}>This is a {variant} alert - check it out!</Alert>
     ));
 

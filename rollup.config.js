@@ -3,6 +3,11 @@ import sass from "rollup-plugin-sass";
 import commonjs from "rollup-plugin-commonjs";
 import external from "rollup-plugin-peer-deps-external";
 import resolve from "rollup-plugin-node-resolve";
+import postcss from "rollup-plugin-postcss";
+import multi from "@rollup/plugin-multi-entry";
+import copy from "rollup-plugin-copy";
+
+const path = require("path");
 
 import pkg from "./package.json";
 
@@ -29,12 +34,11 @@ export default {
         }),
         typescript({
             rollupCommonJSResolveHack: true,
-            exclude: "**/__tests__/**",
             clean: true,
         }),
         commonjs({
             include: ["node_modules/**"],
-            exclude: ["**/*.stories.js"],
+            exclude: ["**/*.stories.tsx"],
             namedExports: {
                 "node_modules/react/react.js": [
                     "Children",
@@ -48,5 +52,17 @@ export default {
         sass({
             insert: true,
         }),
+        postcss({
+            extract: path.resolve("build/css/tabler.css"),
+        }),
+        copy({
+            targets: [
+                { src: "src/static/img/logo.svg", dest: "build/img" },
+                { src: "src/static/img/logo-small-white.svg", dest: "build/img" },
+                { src: "src/static/img/flags/*", dest: "build/img/flags" },
+                { src: "src/static/img/payments/*", dest: "build/img/payments" },
+            ],
+        }),
+        multi(),
     ],
 };

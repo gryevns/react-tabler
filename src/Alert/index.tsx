@@ -2,7 +2,7 @@ import React from "react";
 import cn from "classnames";
 import { Variant } from "../common";
 
-export interface AlertProps {
+interface AlertProps {
     children: React.ReactNode;
     variant: Variant;
     className?: string;
@@ -11,7 +11,7 @@ export interface AlertProps {
     visible?: boolean;
 }
 
-const Alert = ({
+export const Alert = ({
     children,
     className,
     dismiss = true,

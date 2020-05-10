@@ -90,11 +90,9 @@ const Col = ({
     offsetMd = 0,
     offsetLg = 0,
     offsetXl = 0,
-    ignoreCol = false,
 }: ColProps) => {
     const classes = cn(
         {
-            col: !ignoreCol,
             [`col-${width}`]: width,
             [`col-xs-${xs}`]: xs,
             [`col-xs-auto`]: xsAuto,
@@ -116,7 +114,7 @@ const Col = ({
         },
         className,
     );
-    return <div className={classes}>{children}</div>;
+    return <div className={classes || "col"}>{children}</div>;
 };
 
 const Grid = ({ children }) => ({ children });

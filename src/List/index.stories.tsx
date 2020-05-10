@@ -44,7 +44,7 @@ export const Styled = () => (
                             </small>
                         </div>
                         <div className="col-auto">
-                            <Trash />
+                            <Trash size={16} />
                         </div>
                     </div>
                 </List.Item>
@@ -60,7 +60,7 @@ export const Styled = () => (
                             </small>
                         </div>
                         <div className="col-auto">
-                            <Trash />
+                            <Trash size={16} />
                         </div>
                     </div>
                 </List.Item>
@@ -76,7 +76,7 @@ export const Styled = () => (
                             </small>
                         </div>
                         <div className="col-auto">
-                            <Trash />
+                            <Trash size={16} />
                         </div>
                     </div>
                 </List.Item>
@@ -92,7 +92,7 @@ export const Styled = () => (
                             </small>
                         </div>
                         <div className="col-auto">
-                            <Trash />
+                            <Trash size={16} />
                         </div>
                     </div>
                 </List.Item>
@@ -108,7 +108,7 @@ export const Styled = () => (
                             </small>
                         </div>
                         <div className="col-auto">
-                            <Trash />
+                            <Trash size={16} />
                         </div>
                     </div>
                 </List.Item>

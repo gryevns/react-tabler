@@ -1,7 +1,7 @@
 import React from "react";
 import cn from "classnames";
 
-export interface CarouselItemProps {
+interface CarouselItemProps {
     active?: boolean;
     children?: React.ReactNode;
     src: string;
@@ -23,7 +23,7 @@ const CarouselItem = ({ active, children, src, style }: CarouselItemProps) => {
     );
 };
 
-export interface CarouselProps {
+interface CarouselProps {
     children: React.ReactNode[];
     interval?: number;
     slide?: boolean;
@@ -31,7 +31,7 @@ export interface CarouselProps {
     indicators?: boolean;
 }
 
-const Carousel = ({
+export const Carousel = ({
     children,
     interval = 5000,
     slide = true,

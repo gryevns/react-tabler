@@ -1,37 +1,23 @@
 import React from "react";
 
+import { colorOptions } from "../common";
 import Progress from "../Progress";
-import Tooltip from "../Tooltip";
+import { select, withKnobs, boolean } from "@storybook/addon-knobs";
 
 export default {
     title: "Progress",
+    decorators: [withKnobs],
 };
 
 export const Default = () => (
-    <Progress size="md">
-        <Progress.Bar color="blue" width={66} />
+    <Progress
+        size={select("Size", { Small: "sm", Medium: "md" }, "md")}
+        className="mb-2"
+    >
+        <Progress.Bar
+            indeterminate={boolean("Indeterminate", false)}
+            color={select("Color", colorOptions, "red")}
+            width={24}
+        />
     </Progress>
-);
-
-export const Indeterminate = () => (
-    <Progress>
-        <Progress.Bar indeterminate />
-    </Progress>
-);
-
-export const Colors = () => (
-    <>
-        <Progress size="sm" className="mb-2">
-            <Progress.Bar color="red" width={24} />
-        </Progress>
-        <Progress size="sm" className="mb-2">
-            <Progress.Bar color="green" width={45} />
-        </Progress>
-        <Progress size="sm" className="mb-2">
-            <Progress.Bar color="purple" width={64} />
-        </Progress>
-        <Progress size="sm" className="mb-2">
-            <Progress.Bar indeterminate color="pink" />
-        </Progress>
-    </>
 );

@@ -1,15 +1,15 @@
 import React from "react";
 import cn from "classnames";
 
-export type Size = "sm" | "md" | "lg" | "xl";
+type Size = "md" | "lg" | "xl";
 
-export interface FlagProps {
+interface FlagProps {
     className?: string;
     country: string;
     size?: Size;
 }
 
-const Flag = ({ className, country, size }: FlagProps) => {
+export const Flag = ({ className, country, size }: FlagProps) => {
     const classes = cn(
         `flag flag-country-${country}`,
         { [`flag-${size}`]: !!size },

@@ -29,13 +29,29 @@ export interface ModalProps {
     blur?: boolean;
     onHide: () => any;
     children: React.ReactNode;
+    size?: "sm" | "md" | "lg";
+    fullWidth?: boolean;
+    scrollable?: boolean;
 }
 
-const Modal = ({ show, blur = true, onHide, children }: ModalProps) => {
+const Modal = ({
+    show,
+    blur = true,
+    onHide,
+    children,
+    size,
+    fullWidth,
+    scrollable,
+}: ModalProps) => {
     if (!show) {
         return null;
     }
     const classes = cn("modal", { "modal-blur": blur });
+    const dialogClasses = cn("modal-dialog", {
+        "modal-dialog-scrollable": scrollable,
+        "modal-full-width": fullWidth,
+        [`modal-${size}`]: !!size,
+    });
     return (
         <ModalContext.Provider value={{ onHide }}>
             <div
@@ -44,7 +60,7 @@ const Modal = ({ show, blur = true, onHide, children }: ModalProps) => {
                 aria-modal={true}
                 style={{ display: "block" }}
             >
-                <div className="modal-dialog" role="document">
+                <div className={dialogClasses} role="document">
                     <div className="modal-content">{children}</div>
                 </div>
             </div>

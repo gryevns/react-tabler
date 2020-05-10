@@ -29,6 +29,11 @@ export const colors = [
     "gray" as const,
 ];
 
+export const colorOptions = colors.reduce((result, color: string) => {
+    result[color] = color;
+    return result;
+}, {});
+
 export type Variant =
     | "primary"
     | "secondary"

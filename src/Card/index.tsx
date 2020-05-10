@@ -3,33 +3,41 @@ import cn from "classnames";
 import CardOptions from "./CardOptions";
 import CardStatus from "./CardStatus";
 import CardHeader from "./CardHeader";
-import CardTitle from "./CardTitle";
+import { CardTitle, CardSubtitle } from "./CardTitle";
 import CardBody from "./CardBody";
 import CardFooter from "./CardFooter";
+import CardGroup from "./CardGroup";
+import CardImage from "./CardImage";
 
-export type Size = "sm" | "md" | "lg";
+type Size = "sm" | "md" | "lg";
 
-export interface CardProps {
+interface CardProps {
     className?: string;
     children?: React.ReactNode;
+    active?: boolean;
+    inactive?: boolean;
     stacked?: boolean;
     aside?: boolean;
     size?: Size;
     style?: React.CSSProperties;
 }
 
-const Card = function ({
+export const Card = function({
     className,
     children,
     aside,
+    active,
+    inactive,
     stacked,
     size,
     style,
 }: CardProps) {
     const classes = cn(
+        "card",
         {
-            card: true,
-            aside: aside,
+            aside,
+            "card-active": active,
+            "card-inactive": inactive,
             [`card-${size}`]: size,
             "card-stacked": stacked,
         },
@@ -45,9 +53,12 @@ const Card = function ({
 
 Card.Header = CardHeader;
 Card.Title = CardTitle;
+Card.Subtitle = CardSubtitle;
 Card.Body = CardBody;
 Card.Footer = CardFooter;
 Card.Options = CardOptions;
 Card.Status = CardStatus;
+Card.Group = CardGroup;
+Card.Image = CardImage;
 
 export default Card;

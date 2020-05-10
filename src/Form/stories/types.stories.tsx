@@ -1,6 +1,8 @@
 import React from "react";
 
-import Form, { Control, SelectGroup } from "../../Form";
+import Form from "../../Form";
+import Control from "../Control";
+import SelectGroup from "../SelectGroup";
 import Payment from "../../Payment";
 
 export default {
@@ -152,19 +154,59 @@ export const SelectGroups = () => (
     <SelectGroup>
         <SelectGroup.Item>
             <SelectGroup.Input name="name" type="checkbox" value="HTML" />
-            <SelectGroup.Box>HTML</SelectGroup.Box>
+            <SelectGroup.Label>HTML</SelectGroup.Label>
         </SelectGroup.Item>
         <SelectGroup.Item>
             <SelectGroup.Input name="name" type="checkbox" value="CSS" />
-            <SelectGroup.Box>CSS</SelectGroup.Box>
+            <SelectGroup.Label>CSS</SelectGroup.Label>
         </SelectGroup.Item>
         <SelectGroup.Item>
             <SelectGroup.Input name="name" type="checkbox" value="PHP" />
-            <SelectGroup.Box>PHP</SelectGroup.Box>
+            <SelectGroup.Label>PHP</SelectGroup.Label>
         </SelectGroup.Item>
         <SelectGroup.Item>
             <SelectGroup.Input name="name" type="checkbox" value="JavaScript" />
-            <SelectGroup.Box>JavaScript</SelectGroup.Box>
+            <SelectGroup.Label>JavaScript</SelectGroup.Label>
+        </SelectGroup.Item>
+    </SelectGroup>
+);
+
+export const SelectGroupPills = () => (
+    <SelectGroup pills>
+        <SelectGroup.Item>
+            <SelectGroup.Input name="name" type="checkbox" value="HTML" />
+            <SelectGroup.Label>HTML</SelectGroup.Label>
+        </SelectGroup.Item>
+        <SelectGroup.Item>
+            <SelectGroup.Input name="name" type="checkbox" value="CSS" />
+            <SelectGroup.Label>CSS</SelectGroup.Label>
+        </SelectGroup.Item>
+        <SelectGroup.Item>
+            <SelectGroup.Input name="name" type="checkbox" value="PHP" />
+            <SelectGroup.Label>PHP</SelectGroup.Label>
+        </SelectGroup.Item>
+        <SelectGroup.Item>
+            <SelectGroup.Input name="name" type="checkbox" value="JavaScript" />
+            <SelectGroup.Label>JavaScript</SelectGroup.Label>
+        </SelectGroup.Item>
+    </SelectGroup>
+);
+
+export const SelectGroupBoxes = () => (
+    <SelectGroup boxes>
+        <SelectGroup.Item>
+            <SelectGroup.Input name="name" type="radio" value="1" />
+            <SelectGroup.Label>
+                <SelectGroup.Check className="mr-3" />
+                Option 1
+            </SelectGroup.Label>
+        </SelectGroup.Item>
+        <SelectGroup.Item>
+            <SelectGroup.Input name="name" type="radio" value="2" />
+            <SelectGroup.Label>
+                <SelectGroup.Check className="mr-3" />
+                Option 2
+            </SelectGroup.Label>
         </SelectGroup.Item>
     </SelectGroup>
 );

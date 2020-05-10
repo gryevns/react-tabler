@@ -1,14 +1,15 @@
 import React from "react";
 
 import Payment from "../Payment";
+import { select, withKnobs } from "@storybook/addon-knobs";
 
 export default {
     title: "Payment",
+    decorators: [withKnobs],
 };
 
-export const All = () => {
+export const Default = () => {
     const context = require.context("../static/img/payments", true, /.svg$/);
-
     const providers = context
         .keys()
         .map(key => {
@@ -16,10 +17,14 @@ export const All = () => {
         })
         .filter(provider => !provider.includes("-dark"));
 
-    return providers.map(provider => <Payment provider={provider} size="xl" />);
-};
-
-export const Sizes = () =>
-    [undefined, "lg" as const, "xl" as const].map(size => (
-        <Payment provider="paypal" size={size} />
+    return providers.map(provider => (
+        <Payment
+            provider={provider}
+            size={select(
+                "Size",
+                { Default: undefined, Large: "lg", XL: "xl" },
+                "xl",
+            )}
+        />
     ));
+};

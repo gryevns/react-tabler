@@ -38,7 +38,7 @@ export interface BadgeProps {
     variant?: Variant;
 }
 
-const Badge = ({
+export const Badge = ({
     className,
     children,
     pill = false,

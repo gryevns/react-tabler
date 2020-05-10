@@ -1,7 +1,7 @@
 import React from "react";
 import cn from "classnames";
 
-export interface BreadcrumbItemProps {
+interface BreadcrumbItemProps {
     children: React.ReactNode;
     className?: string;
     active?: boolean;
@@ -20,16 +20,16 @@ const BreadcrumbItem = ({ children, className, active }: BreadcrumbItemProps) =>
     );
 };
 
-export type Type = "dots" | "arrows" | "bullets";
+type Type = "dots" | "arrows" | "bullets";
 
-export interface BreadcrumbProps {
+interface BreadcrumbProps {
     children: React.ReactNode;
     className?: string;
     type?: Type;
     alternate?: boolean;
 }
 
-const Breadcrumb = ({
+export const Breadcrumb = ({
     children,
     className,
     type,

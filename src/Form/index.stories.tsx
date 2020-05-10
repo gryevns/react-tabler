@@ -1,9 +1,10 @@
 import React from "react";
 import { Search, User } from "react-feather";
 
-import Form, { Control } from "../../Form";
-import Grid from "../../Grid";
-import Buttons from "../../Buttons";
+import Form from ".";
+import Control from "./Control";
+import Grid from "../Grid";
+import Buttons from "../Buttons";
 
 export default {
     title: "Form",
@@ -58,7 +59,7 @@ export const Separated = () => (
                 <Control.Input type="text" />
             </Grid.Col>
             <Grid.Col auto>
-                <Buttons.Button variant="secondary" icon>
+                <Buttons.Button color="white" icon>
                     <Search size={18} />
                 </Buttons.Button>
             </Grid.Col>
@@ -84,9 +85,9 @@ export const Validation = () => (
 
 export const Sizes = () => (
     <Form>
-        <Control.Input type="text" size="lg" className="mb-2" />
+        <Control.Input type="text" padding="lg" className="mb-2" />
         <Control.Input type="text" className="mb-2" />
-        <Control.Input type="text" size="sm" />
+        <Control.Input type="text" padding="sm" />
     </Form>
 );
 
