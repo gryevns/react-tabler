@@ -1,33 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`List should match item snapshot 1`] = `
+<li
+  className=""
+>
+  item
+</li>
+`;
+
 exports[`List should match snapshot 1`] = `
 <ul
   className="list"
 >
   <ListItem>
-    An Item
-  </ListItem>
-  <ListItem>
-    Another Item
-  </ListItem>
-  <ListItem>
-    A third item
+    item
   </ListItem>
 </ul>
 `;
 
-exports[`List should match snapshot 2`] = `
+exports[`List should match unstyled snapshot 1`] = `
 <ul
   className="list-unstyled"
 >
   <ListItem>
-    An Item
-  </ListItem>
-  <ListItem>
-    Another Item
-  </ListItem>
-  <ListItem>
-    A third item
+    item
   </ListItem>
 </ul>
 `;

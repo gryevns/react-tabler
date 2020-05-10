@@ -20,6 +20,14 @@ exports[`Card should match active snapshot 2`] = `
 </div>
 `;
 
+exports[`Card should match footer snapshot 1`] = `
+<div
+  className="card-footer"
+>
+  Card footer
+</div>
+`;
+
 exports[`Card should match group snapshot 1`] = `
 <div
   className="card-group"
@@ -41,11 +49,35 @@ exports[`Card should match group snapshot 1`] = `
 </div>
 `;
 
+exports[`Card should match header snapshot 1`] = `
+<div
+  className="card-header"
+>
+  Card header
+</div>
+`;
+
+exports[`Card should match image snapshot 1`] = `
+<img
+  alt="Card top image"
+  className="card-img-top"
+  src="https://picsum.photos/300/150"
+/>
+`;
+
 exports[`Card should match loading snapshot 1`] = `
 <div
   className="card-body"
 >
   <Loading />
+</div>
+`;
+
+exports[`Card should match options snapshot 1`] = `
+<div
+  className="card-options"
+>
+  Card options
 </div>
 `;
 
@@ -93,16 +125,14 @@ exports[`Card should match snapshot 1`] = `
 <div
   className="card"
 >
-  <CardHeader>
-    <Component>
-      Card title
-    </Component>
-  </CardHeader>
   <CardBody>
     <p>
       This is some text within a card body.
     </p>
   </CardBody>
+  <CardFooter>
+    footer
+  </CardFooter>
 </div>
 `;
 
@@ -128,4 +158,20 @@ exports[`Card should match status snaphost 3`] = `
 <div
   className="card-status bg-purple card-status-left"
 />
+`;
+
+exports[`Card should match subtitle snapshot 1`] = `
+<div
+  className="card-subtitle"
+>
+  Card subtitle
+</div>
+`;
+
+exports[`Card should match title snapshot 1`] = `
+<h3
+  className="card-title"
+>
+  Card title
+</h3>
 `;

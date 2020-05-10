@@ -7,21 +7,21 @@ describe("List", () => {
     it("should match snapshot", () => {
         const wrapper = shallow(
             <List>
-                <List.Item>An Item</List.Item>
-                <List.Item>Another Item</List.Item>
-                <List.Item>A third item</List.Item>
+                <List.Item>item</List.Item>
             </List>,
         );
         expect(wrapper).toMatchSnapshot();
     });
-    it("should match snapshot", () => {
+    it("should match unstyled snapshot", () => {
         const wrapper = shallow(
             <List unstyled>
-                <List.Item>An Item</List.Item>
-                <List.Item>Another Item</List.Item>
-                <List.Item>A third item</List.Item>
+                <List.Item>item</List.Item>
             </List>,
         );
+        expect(wrapper).toMatchSnapshot();
+    });
+    it("should match item snapshot", () => {
+        const wrapper = shallow(<List.Item>item</List.Item>);
         expect(wrapper).toMatchSnapshot();
     });
 });

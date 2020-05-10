@@ -1,6 +1,5 @@
 import React from "react";
 import cn from "classnames";
-import { MemoryRouter as Router, Link } from "react-router-dom";
 import { withKnobs, boolean } from "@storybook/addon-knobs";
 
 import logo from "../static/img/logo.svg";
@@ -15,14 +14,6 @@ export default {
     title: "Navigation",
     decorators: [withKnobs],
 };
-
-export const ReactRouter = () => (
-    <Router>
-        <Link to="/test" component={Nav.Link}>
-            Link
-        </Link>
-    </Router>
-);
 
 const NavItems = ({ className = "" }) => (
     <Nav.List className={className}>

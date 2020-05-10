@@ -1,5 +1,4 @@
 import React from "react";
-import { Link, MemoryRouter as Router } from "react-router-dom";
 import { Facebook, Instagram, Twitter } from "react-feather";
 import { action } from "@storybook/addon-actions";
 
@@ -37,14 +36,6 @@ export const InputHTML = () => {
         />
     );
 };
-
-export const ReactRouterLink = () => (
-    <Router>
-        <Link to="/" component={Buttons.Button} variant="primary">
-            Home
-        </Link>
-    </Router>
-);
 
 export const Variants = () => (
     <Buttons.List>

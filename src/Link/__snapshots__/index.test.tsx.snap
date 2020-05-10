@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link should match snapshot 1`] = `
+<a
+  className="link-primary"
+>
+  link
+</a>
+`;
+
+exports[`Link should match snapshot 2`] = `
+<a
+  className="link-secondary"
+>
+  link
+</a>
+`;
+
+exports[`Link should match snapshot 3`] = `
+<a
+  className="link-success"
+>
+  link
+</a>
+`;
+
+exports[`Link should match snapshot 4`] = `
+<a
+  className="link-info"
+>
+  link
+</a>
+`;
+
+exports[`Link should match snapshot 5`] = `
+<a
+  className="link-warning"
+>
+  link
+</a>
+`;
+
+exports[`Link should match snapshot 6`] = `
+<a
+  className="link-danger"
+>
+  link
+</a>
+`;

@@ -60,11 +60,7 @@ export const Title = () => (
 
 export const Image = () => (
     <Card style={{ width: 300 }}>
-        <img
-            src="https://picsum.photos/300/150"
-            className="card-img-top"
-            alt="Card top image"
-        ></img>
+        <Card.Image src="https://picsum.photos/300/150" alt="Card top image" top />
         <Card.Body>
             <Card.Title>Card with title and image</Card.Title>
             <p>

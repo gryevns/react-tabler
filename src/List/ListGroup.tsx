@@ -5,21 +5,16 @@ export interface ListGroupProps {
     className?: string;
     children: React.ReactNode;
     transparent?: boolean;
-    isCardBody?: boolean;
+    card?: boolean;
 }
 
-function ListGroup({
-    className,
-    children,
-    transparent,
-    isCardBody,
-}: ListGroupProps) {
+function ListGroup({ className, children, transparent, card }: ListGroupProps) {
     const classes = cn(
         "list-group",
         "mb-0",
         {
             "list-group-transparent": transparent,
-            "card-list-group": isCardBody,
+            "card-list-group": card,
         },
         className,
     );

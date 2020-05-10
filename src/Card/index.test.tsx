@@ -7,12 +7,10 @@ describe("Card", () => {
     it("should match snapshot", () => {
         const wrapper = shallow(
             <Card>
-                <Card.Header>
-                    <Card.Title>Card title</Card.Title>
-                </Card.Header>
                 <Card.Body>
                     <p>This is some text within a card body.</p>
                 </Card.Body>
+                <Card.Footer>footer</Card.Footer>
             </Card>,
         );
         expect(wrapper).toMatchSnapshot();
@@ -63,6 +61,36 @@ describe("Card", () => {
     });
     it("should match loading snapshot", () => {
         const wrapper = shallow(<Card.Body loading={true} />);
+        expect(wrapper).toMatchSnapshot();
+    });
+    it("should match header snapshot", () => {
+        const wrapper = shallow(<Card.Header>Card header</Card.Header>);
+        expect(wrapper).toMatchSnapshot();
+    });
+    it("should match title snapshot", () => {
+        const wrapper = shallow(<Card.Title>Card title</Card.Title>);
+        expect(wrapper).toMatchSnapshot();
+    });
+    it("should match subtitle snapshot", () => {
+        const wrapper = shallow(<Card.Subtitle>Card subtitle</Card.Subtitle>);
+        expect(wrapper).toMatchSnapshot();
+    });
+    it("should match options snapshot", () => {
+        const wrapper = shallow(<Card.Options>Card options</Card.Options>);
+        expect(wrapper).toMatchSnapshot();
+    });
+    it("should match footer snapshot", () => {
+        const wrapper = shallow(<Card.Footer>Card footer</Card.Footer>);
+        expect(wrapper).toMatchSnapshot();
+    });
+    it("should match image snapshot", () => {
+        const wrapper = shallow(
+            <Card.Image
+                src="https://picsum.photos/300/150"
+                alt="Card top image"
+                top
+            />,
+        );
         expect(wrapper).toMatchSnapshot();
     });
 });
