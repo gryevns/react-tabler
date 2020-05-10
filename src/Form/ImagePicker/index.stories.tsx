@@ -1,6 +1,7 @@
 import React from "react";
 
-import Form, { ImageCheck } from "../../Form";
+import Form from "..";
+import ImagePicker from ".";
 import Grid from "../../Grid";
 
 export default {
@@ -51,10 +52,10 @@ export const Default = () => (
         <Grid.Row>
             {images.map(image => (
                 <Grid.Col width={6} sm={4}>
-                    <ImageCheck.Label className="mb-2">
-                        <ImageCheck.Input />
-                        <ImageCheck.Figure {...image} />
-                    </ImageCheck.Label>
+                    <ImagePicker.Label className="mb-2">
+                        <ImagePicker.Input />
+                        <ImagePicker.Figure {...image} />
+                    </ImagePicker.Label>
                 </Grid.Col>
             ))}
         </Grid.Row>

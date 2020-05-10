@@ -4,7 +4,8 @@ import * as Yup from "yup";
 
 import Buttons from "../../Buttons";
 import Card from "../../Card";
-import Form, { Control } from "../../Form";
+import Form from "../../Form";
+import Control from "../Control";
 
 export default {
     title: "Form/Formik",

@@ -22,7 +22,7 @@ exports[`Tabs should match alt snapshot 1`] = `
         }
       }
     >
-      <Card>
+      <Component>
         <div
           className="card"
         >
@@ -84,7 +84,7 @@ exports[`Tabs should match alt snapshot 1`] = `
             </div>
           </CardBody>
         </div>
-      </Card>
+      </Component>
     </DefaultTabs>
   </Tabs>
 </Test>
@@ -198,7 +198,7 @@ exports[`Tabs should match fill snapshot 1`] = `
         }
       }
     >
-      <Card>
+      <Component>
         <div
           className="card"
         >
@@ -260,7 +260,7 @@ exports[`Tabs should match fill snapshot 1`] = `
             </div>
           </CardBody>
         </div>
-      </Card>
+      </Component>
     </DefaultTabs>
   </Tabs>
 </Test>
@@ -283,7 +283,7 @@ exports[`Tabs should match snapshot 1`] = `
         }
       }
     >
-      <Card>
+      <Component>
         <div
           className="card"
         >
@@ -344,7 +344,7 @@ exports[`Tabs should match snapshot 1`] = `
             </div>
           </CardBody>
         </div>
-      </Card>
+      </Component>
     </DefaultTabs>
   </Tabs>
 </Test>

@@ -3,7 +3,7 @@ import { Link, MemoryRouter as Router } from "react-router-dom";
 import { Facebook, Instagram, Twitter } from "react-feather";
 import { action } from "@storybook/addon-actions";
 
-import { Anchor, Button, Input, List } from ".";
+import Buttons from ".";
 import Tooltip from "../Tooltip";
 import { Upload } from "react-feather";
 import { colors, Color, variants, Variant } from "../common";
@@ -14,127 +14,141 @@ export default {
 
 export const ButtonHTML = () => {
     return (
-        <Button variant="primary" onClick={action("button-click")}>
+        <Buttons.Button variant="primary" onClick={action("button-click")}>
             Button
-        </Button>
+        </Buttons.Button>
     );
 };
 
 export const AnchorHTML = () => {
     return (
-        <Anchor variant="secondary" onClick={action("button-click")}>
+        <Buttons.Anchor variant="secondary" onClick={action("button-click")}>
             Anchor
-        </Anchor>
+        </Buttons.Anchor>
     );
 };
 
 export const InputHTML = () => {
     return (
-        <Input variant="warning" onClick={action("button-click")} value="Input" />
+        <Buttons.Input
+            variant="warning"
+            onClick={action("button-click")}
+            value="Input"
+        />
     );
 };
 
 export const ReactRouterLink = () => (
     <Router>
-        <Link to="/" component={Button} variant="primary">
+        <Link to="/" component={Buttons.Button} variant="primary">
             Home
         </Link>
     </Router>
 );
 
 export const Variants = () => (
-    <List>
-        {variants.map((variant: Variant) => (
-            <Button variant={variant}>{variant}</Button>
+    <Buttons.List>
+        {[...variants, "light", "dark", "link"].map((variant: Variant) => (
+            <Buttons.Button variant={variant}>{variant}</Buttons.Button>
         ))}
-    </List>
+    </Buttons.List>
+);
+
+export const Ghost = () => (
+    <Buttons.List>
+        {[...variants, "light", "dark", "link"].map((variant: Variant) => (
+            <Buttons.Button variant={variant} ghost>
+                {variant}
+            </Buttons.Button>
+        ))}
+    </Buttons.List>
 );
 
 export const Colors = () => (
-    <List>
+    <Buttons.List>
         {colors.map((color: Color) => (
-            <Button color={color}>{color}</Button>
+            <Buttons.Button color={color}>{color}</Buttons.Button>
         ))}
-    </List>
+    </Buttons.List>
 );
 
 export const Disabled = () => (
-    <List>
-        {variants.map((variant: Variant) => (
-            <Button disabled variant={variant}>
+    <Buttons.List>
+        {[...variants, "light", "dark", "link"].map((variant: Variant) => (
+            <Buttons.Button disabled variant={variant}>
                 {variant}
-            </Button>
+            </Buttons.Button>
         ))}
-    </List>
+    </Buttons.List>
 );
 
 export const Square = () => (
-    <List>
-        {variants.map((variant: Variant) => (
-            <Button square variant={variant}>
+    <Buttons.List>
+        {[...variants, "light", "dark", "link"].map((variant: Variant) => (
+            <Buttons.Button square variant={variant}>
                 {variant}
-            </Button>
+            </Buttons.Button>
         ))}
-    </List>
+    </Buttons.List>
 );
 
 export const Pill = () => (
-    <List>
-        {variants.map((variant: Variant) => (
-            <Button pill variant={variant}>
+    <Buttons.List>
+        {[...variants, "light", "dark", "link"].map((variant: Variant) => (
+            <Buttons.Button pill variant={variant}>
                 {variant}
-            </Button>
+            </Buttons.Button>
         ))}
-    </List>
+    </Buttons.List>
 );
 
 export const Outline = () => (
-    <List>
-        {variants.map((variant: Variant) => (
-            <Button outline variant={variant}>
+    <Buttons.List>
+        {[...variants, "light", "dark", "link"].map((variant: Variant) => (
+            <Buttons.Button outline variant={variant}>
                 {variant}
-            </Button>
+            </Buttons.Button>
         ))}
-    </List>
+    </Buttons.List>
 );
 
 export const Loading = () => (
-    <List>
-        {variants.map((variant: Variant) => (
-            <Button loading variant={variant}>
+    <Buttons.List>
+        {[...variants, "light", "dark", "link"].map((variant: Variant) => (
+            <Buttons.Button loading variant={variant}>
                 {variant}
-            </Button>
+            </Buttons.Button>
         ))}
-    </List>
+    </Buttons.List>
 );
 
 export const Sizes = () =>
-    ["sm" as const, "md" as const, "lg" as const].map((size) => (
-        <Button size={size} block={true} variant="primary">
+    ["sm" as const, "md" as const, "lg" as const].map(size => (
+        <Buttons.Button size={size} block={true} variant="primary">
             {size}
-        </Button>
+        </Buttons.Button>
     ));
 
 export const Tooltips = () => (
     <Tooltip placement="bottom" content="tooltip">
-        <Button variant="primary">Hover me</Button>
+        <Buttons.Button variant="primary">Hover me</Buttons.Button>
     </Tooltip>
 );
 
 export const Icons = () => (
-    <List>
-        <Anchor variant="primary" icon social="facebook">
+    <Buttons.List>
+        <Buttons.Anchor variant="primary" icon social="facebook">
             <Facebook size={18} color="white" className="icon" />
-        </Anchor>
-        <Anchor variant="primary" icon social="instagram">
+        </Buttons.Anchor>
+        <Buttons.Anchor variant="primary" icon social="instagram">
             <Instagram size={18} color="white" className="icon" />
-        </Anchor>
-        <Anchor variant="primary" icon social="twitter">
+        </Buttons.Anchor>
+        <Buttons.Anchor variant="primary" icon social="twitter">
             <Twitter size={18} color="white" className="icon" />
-        </Anchor>
-        <Button link>
+        </Buttons.Anchor>
+        <Buttons.Button link>
             <Upload size={18} className="icon" />
             &nbsp;Upload
-        </Button>
-    </List>
+        </Buttons.Button>
+    </Buttons.List>
 );

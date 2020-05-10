@@ -13,7 +13,7 @@ import Card from "../Card";
 import Table from "../Table";
 import Progress from "../Progress";
 import Payment from "../Payment";
-import { Control } from "../Form";
+import Control from "../Form/Control";
 
 export default {
     title: "Table",
@@ -215,7 +215,7 @@ export const Responsive = () => (
                 </Table.Row>
             </Table.Header>
             <Table.Body>
-                {data.map((item) => (
+                {data.map(item => (
                     <Table.Row>
                         <Table.Col className="text-center">
                             <Avatar
@@ -306,7 +306,7 @@ export const SocialMediaTraffice = () => (
                 </Table.Row>
             </Table.Header>
             <Table.Body>
-                {social.map((site) => (
+                {social.map(site => (
                     <Table.Row>
                         <Table.Col>{site.name}</Table.Col>
                         <Table.Col>{site.visitors}</Table.Col>
@@ -368,7 +368,7 @@ export const Tasks = () => (
         </Card.Header>
         <Table cards responsive verticalAlign="center">
             <Table.Body>
-                {tasks.map((task) => (
+                {tasks.map(task => (
                     <Table.Row>
                         <Table.Col className="w-1 pr-0">
                             <Control.Group>

@@ -16,18 +16,6 @@ describe("Dropdown", () => {
         );
         expect(component).toMatchSnapshot();
     });
-    it("should match link snapshot", () => {
-        const component = shallow(
-            <Dropdown>
-                <Dropdown.Link>Click Me!&nbsp;</Dropdown.Link>
-                <Dropdown.Menu arrow>
-                    <Dropdown.Item>Dropdown link</Dropdown.Item>
-                    <Dropdown.Item>Dropdown link</Dropdown.Item>
-                </Dropdown.Menu>
-            </Dropdown>,
-        );
-        expect(component).toMatchSnapshot();
-    });
     it("should render dropdown on click", () => {
         const component = mount(
             <Dropdown>

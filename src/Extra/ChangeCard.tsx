@@ -1,5 +1,4 @@
 import React from "react";
-import { ChevronDown, ChevronUp, Minus } from "react-feather";
 
 import Card from "../Card";
 
@@ -16,13 +15,6 @@ export const ChangeCard = ({
                 {movement !== undefined && (
                     <div className={`text-right text-${movementColor}`}>
                         {movementString}
-                        {!movement ? (
-                            <Minus />
-                        ) : movement > 0 ? (
-                            <ChevronUp />
-                        ) : (
-                            <ChevronDown />
-                        )}
                     </div>
                 )}
                 <div className="display-4 font-weight-bold m-0">{total}</div>

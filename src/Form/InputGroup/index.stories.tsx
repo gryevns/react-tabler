@@ -1,7 +1,9 @@
 import React from "react";
 import { Bell, Sliders, X } from "react-feather";
 
-import Form, { Control, InputGroup } from "../../Form";
+import Form from "..";
+import Control from "../Control";
+import InputGroup from ".";
 
 export default {
     title: "Form/Input Group",

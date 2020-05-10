@@ -46,7 +46,7 @@ export interface ProgressProps {
     className?: string;
     children?: React.ReactNode;
     card?: boolean;
-    size?: "xs" | "sm" | "md";
+    size?: "sm" | "md";
 }
 
 function Progress({ className, children, card, size, ...rest }: ProgressProps) {

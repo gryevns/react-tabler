@@ -7,7 +7,7 @@ export interface ListProps {
     children: React.ReactNode;
 }
 
-export const List = ({ className, children }: ListProps) => {
+const List = ({ className, children }: ListProps) => {
     const classes = cn(`btn-list`, className);
     return <div className={classes}>{children}</div>;
 };
@@ -23,12 +23,13 @@ interface ButtonProps {
     icon?: boolean;
     block?: boolean;
     disabled?: boolean;
-    color?: Color;
-    variant?: Variant | "link";
+    color?: Color | "white";
+    variant?: Variant | "link" | "light" | "dark";
     square?: boolean;
     pill?: boolean;
     loading?: boolean;
     social?: string;
+    ghost?: boolean;
 }
 
 const getClassName = ({
@@ -45,10 +46,12 @@ const getClassName = ({
     square,
     social,
     className,
+    ghost,
 }: ButtonProps) => {
     const classes = cn(
         {
             btn: true,
+            [`btn-ghost-${variant}`]: ghost,
             [`btn-${size}`]: !!size,
             [`btn-block`]: block,
             [`btn-outline-${variant}`]: outline && !!variant,
@@ -67,7 +70,7 @@ const getClassName = ({
     return classes;
 };
 
-export const Anchor = React.forwardRef(
+const Anchor = React.forwardRef(
     (
         props: ButtonProps & React.AnchorHTMLAttributes<HTMLElement>,
         ref: React.Ref<HTMLAnchorElement>,
@@ -81,7 +84,7 @@ export const Anchor = React.forwardRef(
     },
 );
 
-export const Input = React.forwardRef(
+const Input = React.forwardRef(
     (
         props: ButtonProps & React.InputHTMLAttributes<HTMLElement>,
         ref: React.Ref<HTMLInputElement>,
@@ -91,7 +94,7 @@ export const Input = React.forwardRef(
     },
 );
 
-export const Button = React.forwardRef(
+const Button = React.forwardRef(
     (
         props: ButtonProps & React.ButtonHTMLAttributes<HTMLElement>,
         ref: React.Ref<HTMLButtonElement>,
@@ -105,7 +108,7 @@ export const Button = React.forwardRef(
     },
 );
 
-const Buttons = () => {};
+export const Buttons = () => {};
 
 Buttons.Anchor = Anchor;
 Buttons.Button = Button;

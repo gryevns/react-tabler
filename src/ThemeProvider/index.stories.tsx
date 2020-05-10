@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Control } from "../Form";
+import Control from "../Form/Control";
 import ThemeProvider, { ThemeContext } from ".";
 
 export default {

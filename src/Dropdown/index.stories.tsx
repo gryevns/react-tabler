@@ -5,6 +5,7 @@ import Buttons from "../Buttons";
 import Card from "../Card";
 import Dropdown from "../Dropdown";
 import { Calendar, Edit, Settings } from "react-feather";
+import Avatar from "../Avatar";
 
 export default {
     title: "Dropdown",
@@ -44,16 +45,6 @@ export const Button = () => (
     </Buttons.List>
 );
 
-export const Link = () => (
-    <Dropdown>
-        <Dropdown.Link>Click Me!&nbsp;</Dropdown.Link>
-        <Dropdown.Menu arrow>
-            <Dropdown.Item>Dropdown link</Dropdown.Item>
-            <Dropdown.Item>Dropdown link</Dropdown.Item>
-        </Dropdown.Menu>
-    </Dropdown>
-);
-
 export const Dark = () => (
     <Dropdown>
         <Dropdown.Button variant="secondary">Dark Dropdown</Dropdown.Button>
@@ -69,14 +60,12 @@ export const CardContent = () => (
     <Dropdown>
         <Dropdown.Button variant="secondary">Card Content</Dropdown.Button>
         <Dropdown.Menu card>
-            <Card className="d-flect flex-column">
-                <a href="#">
-                    <img
-                        className="card-img-top"
-                        src="https://picsum.photos/id/562/600/200"
-                        alt="How do you know she is a witch?"
-                    />
-                </a>
+            <Card className="d-flex flex-column">
+                <Card.Image
+                    top
+                    src="https://picsum.photos/id/562/600/200"
+                    alt="How do you know she is a witch?"
+                />
                 <Card.Body>
                     <Card.Title>How do you know she is a witch?</Card.Title>
                     <div className="text-muted">
@@ -84,13 +73,7 @@ export const CardContent = () => (
                         yes. A bit. But she's got a wart. You ...
                     </div>
                     <div className="d-flex align-items-center pt-5 mt-auto">
-                        <span
-                            className="avatar avatar-md"
-                            style={{
-                                backgroundImage:
-                                    "url(https://picsum.photos/id/128/128)",
-                            }}
-                        ></span>
+                        <Avatar imageURL="https://picsum.photos/id/128/128" />
                         <div className="ml-3">
                             <a href="#" className="text-body">
                                 Maryjo Lebarree

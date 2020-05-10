@@ -1,4 +1,5 @@
 import React from "react";
+import cn from "classnames";
 
 import { NavContext } from "../Nav";
 
@@ -27,25 +28,23 @@ const PageOptions = ({ children }) => (
     <div className="page-options d-flex">{children}</div>
 );
 
-const Content = ({ children }) => (
-    <div className="content">
-        <Container>{children}</Container>
-    </div>
-);
+const Content = ({ children }) => <div className="content">{children}</div>;
 
-const Footer = ({ children }) => (
-    <footer className="footer">
-        <Container>{children}</Container>
-    </footer>
-);
+const Footer = ({ children }) => <footer className="footer">{children}</footer>;
 
-const SubFooter = ({ children }) => (
-    <div className="footer">
-        <Container>{children}</Container>
-    </div>
-);
+const SubFooter = ({ children }) => <div className="footer">{children}</div>;
 
-const Container = ({ children }) => <div className="container">{children}</div>;
+interface ContainerProps {
+    children: React.ReactNode;
+    size?: "md" | "lg" | "xl" | "fluid";
+}
+
+const Container = ({ children, size }: ContainerProps) => {
+    const classes = cn({ container: !size, [`container-${size}`]: size });
+    return <div className={classes}>{children}</div>;
+};
+
+const Empty = ({ children }) => <div className="empty">{children}</div>;
 
 Page.Header = PageHeader;
 Page.Pretitle = PagePreTitle;
@@ -53,9 +52,9 @@ Page.Title = PageTitle;
 Page.SubTitle = PageSubTitle;
 Page.Options = PageOptions;
 Page.Content = Content;
-Page.Content = Content;
 Page.Footer = Footer;
 Page.SubFooter = SubFooter;
 Page.Container = Container;
+Page.Empty = Empty;
 
 export default Page;

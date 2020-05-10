@@ -1,7 +1,7 @@
 import React from "react";
 import cn from "classnames";
 
-import { Color } from "../common";
+import { Color } from "../../common";
 
 export interface ColorInputColor {
     color: Color;

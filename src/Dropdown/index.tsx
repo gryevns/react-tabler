@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import cn from "classnames";
 import Buttons from "../Buttons";
-import Nav from "../Nav";
 import { Variant } from "../common";
 
 interface ContextState {
@@ -17,7 +16,7 @@ const DropdownHeader = ({ children }) => (
     <span className="dropdown-header">{children}</span>
 );
 
-export interface DropdownItemProps {
+interface DropdownItemProps {
     className?: string;
     children: React.ReactNode;
     active?: boolean;
@@ -42,7 +41,7 @@ const DropdownItem = ({
     );
 };
 
-export interface DropdownMenuProps {
+interface DropdownMenuProps {
     children: React.ReactNode;
     className?: string;
     arrow?: boolean;
@@ -78,12 +77,12 @@ const DropdownMenu = ({
     );
 };
 
-export interface DropdownProps {
+interface DropdownProps {
     className?: string;
     children: React.ReactNode;
 }
 
-const Dropdown = ({ className, children }: DropdownProps) => {
+export const Dropdown = ({ className, children }: DropdownProps) => {
     const ref = useRef(null);
     const [dropdownVisible, setDropdownVisible] = React.useState(false);
     const classes = cn("dropdown", className);
@@ -109,7 +108,7 @@ const Dropdown = ({ className, children }: DropdownProps) => {
     );
 };
 
-export interface DropdownButtonProps {
+interface DropdownButtonProps {
     children?: React.ReactNode;
     className?: string;
     variant?: Variant;
@@ -134,37 +133,9 @@ const DropdownButton = ({ children, className, ...props }: DropdownButtonProps) 
     );
 };
 
-export interface DropdownLinkProps extends React.AnchorHTMLAttributes<HTMLElement> {
-    children: React.ReactNode;
-    className?: string;
-}
-
-const DropdownLink = ({ children, className, ...props }: DropdownLinkProps) => {
-    const { dropdownVisible, setDropdownVisible } = React.useContext(
-        DropdownContext,
-    );
-    const onClick = (e: React.MouseEvent) => {
-        setDropdownVisible(!dropdownVisible);
-        e.preventDefault();
-    };
-    const classes = cn(className);
-    return (
-        <Nav.Link
-            onClick={onClick}
-            className={classes}
-            {...props}
-            data-toggle="dropdown"
-            aria-expanded={dropdownVisible}
-        >
-            {children}
-        </Nav.Link>
-    );
-};
-
 const DropdownDivider = () => <div className="dropdown-divider" />;
 
 Dropdown.Button = DropdownButton;
-Dropdown.Link = DropdownLink;
 Dropdown.Menu = DropdownMenu;
 Dropdown.Item = DropdownItem;
 Dropdown.Divider = DropdownDivider;

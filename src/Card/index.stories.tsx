@@ -21,11 +21,23 @@ export const Default = () => (
 const sizes = ["sm" as const, undefined, "md" as const, "lg" as const];
 
 export const Padding = () =>
-    sizes.map((size) => (
+    sizes.map(size => (
         <Card size={size}>
             <Card.Body>This is some text within a card body.</Card.Body>
         </Card>
     ));
+
+export const Active = () => (
+    <Card active>
+        <Card.Body>This is a card with active state.</Card.Body>
+    </Card>
+);
+
+export const Inactive = () => (
+    <Card inactive>
+        <Card.Body>This is some text inactive state.</Card.Body>
+    </Card>
+);
 
 export const Title = () => (
     <>
@@ -62,6 +74,20 @@ export const Image = () => (
             </p>
         </Card.Body>
     </Card>
+);
+
+export const Group = () => (
+    <Card.Group>
+        <Card inactive>
+            <Card.Body>First card</Card.Body>
+        </Card>
+        <Card active>
+            <Card.Body>Second card</Card.Body>
+        </Card>
+        <Card>
+            <Card.Body>Third card</Card.Body>
+        </Card>
+    </Card.Group>
 );
 
 export const BlogPostCard = () => (
@@ -148,7 +174,7 @@ export const Advanced = () => (
 );
 
 export const Status = () =>
-    ["top", "bottom", "left"].map((position) => {
+    ["top", "bottom", "left"].map(position => {
         const props = { [position]: true };
         return (
             <Card>
