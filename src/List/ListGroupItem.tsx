@@ -7,7 +7,6 @@ export interface ListGroupItemProps {
     as?: React.ElementType;
     active?: boolean;
     action?: boolean;
-    icon?: string;
     to?: string;
 }
 
@@ -17,7 +16,6 @@ function ListGroupItem({
     as = "a",
     active,
     action,
-    icon,
 }: ListGroupItemProps) {
     const classes = cn(
         "list-group-item",
@@ -30,12 +28,7 @@ function ListGroupItem({
         className,
     );
     const Component = as;
-    return (
-        <Component className={classes}>
-            {icon && <span className="mr-3 icon">TODO</span>}
-            {children}
-        </Component>
-    );
+    return <Component className={classes}>{children}</Component>;
 }
 
 export default ListGroupItem;

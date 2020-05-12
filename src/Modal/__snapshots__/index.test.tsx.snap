@@ -1,5 +1,101 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Modal should match size snapshot 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "onHide": null,
+    }
+  }
+>
+  <div
+    aria-modal={true}
+    className="modal modal-blur"
+    role="dialog"
+    style={
+      Object {
+        "display": "block",
+      }
+    }
+  >
+    <div
+      className="modal-dialog modal-sm"
+      role="document"
+    >
+      <div
+        className="modal-content"
+      >
+        test
+      </div>
+    </div>
+  </div>
+</ContextProvider>
+`;
+
+exports[`Modal should match size snapshot 2`] = `
+<ContextProvider
+  value={
+    Object {
+      "onHide": null,
+    }
+  }
+>
+  <div
+    aria-modal={true}
+    className="modal modal-blur"
+    role="dialog"
+    style={
+      Object {
+        "display": "block",
+      }
+    }
+  >
+    <div
+      className="modal-dialog modal-md"
+      role="document"
+    >
+      <div
+        className="modal-content"
+      >
+        test
+      </div>
+    </div>
+  </div>
+</ContextProvider>
+`;
+
+exports[`Modal should match size snapshot 3`] = `
+<ContextProvider
+  value={
+    Object {
+      "onHide": null,
+    }
+  }
+>
+  <div
+    aria-modal={true}
+    className="modal modal-blur"
+    role="dialog"
+    style={
+      Object {
+        "display": "block",
+      }
+    }
+  >
+    <div
+      className="modal-dialog modal-lg"
+      role="document"
+    >
+      <div
+        className="modal-content"
+      >
+        test
+      </div>
+    </div>
+  </div>
+</ContextProvider>
+`;
+
 exports[`Modal should match snapshot 1`] = `
 <Modal
   onHide={[MockFunction]}

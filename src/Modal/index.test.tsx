@@ -1,5 +1,5 @@
 import React from "react";
-import { mount } from "enzyme";
+import { shallow, mount } from "enzyme";
 
 import Modal from "./index";
 
@@ -19,5 +19,14 @@ describe("Modal", () => {
         wrapper.find("button.close").simulate("click");
         expect(handleClose).toHaveBeenCalled();
     });
-    // TODO
+    it("should match size snapshot", () => {
+        ["sm" as const, "md" as const, "lg" as const].map(size => {
+            const wrapper = shallow(
+                <Modal size={size} show onHide={null}>
+                    test
+                </Modal>,
+            );
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
 });

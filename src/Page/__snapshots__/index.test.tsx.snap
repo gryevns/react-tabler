@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Page should match page container snapshot 1`] = `
+<div
+  className="container"
+>
+  Container
+</div>
+`;
+
+exports[`Page should match page content snapshot 1`] = `
+<div
+  className="content"
+>
+  Content
+</div>
+`;
+
+exports[`Page should match page footer snapshot 1`] = `
+<footer
+  className="footer"
+>
+  Footer
+</footer>
+`;
+
+exports[`Page should match page header snapshot 1`] = `
+<div
+  className="page-header"
+>
+  Header
+</div>
+`;
+
+exports[`Page should match page pretitle snapshot 1`] = `
+<div
+  className="page-pretitle"
+>
+  Pretitle
+</div>
+`;
+
+exports[`Page should match page snapshot 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "menuVisible": false,
+      "setMenuVisible": [Function],
+    }
+  }
+>
+  <div
+    className="page"
+  >
+    Page
+  </div>
+</ContextProvider>
+`;
+
+exports[`Page should match page subfooter snapshot 1`] = `
+<div
+  className="footer"
+>
+  SubFooter
+</div>
+`;
+
+exports[`Page should match page subtitle snapshot 1`] = `
+<div
+  className="page-subtitle"
+>
+  SubTitle
+</div>
+`;
+
+exports[`Page should match page title snapshot 1`] = `
+<h2
+  className="page-title"
+>
+  Title
+</h2>
+`;
