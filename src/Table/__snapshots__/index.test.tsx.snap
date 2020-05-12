@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Table should match cards snapshot 1`] = `
+<table
+  className="table card-table"
+>
+  test
+</table>
+`;
+
+exports[`Table should match hight snapshot 1`] = `
+<table
+  className="table table-hover"
+>
+  test
+</table>
+`;
+
+exports[`Table should match snapshot 1`] = `
+<table
+  className="table"
+>
+  <TableHeader>
+    <TableColHeader>
+      User
+    </TableColHeader>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCol>
+        Ronald Bradley
+      </TableCol>
+    </TableRow>
+  </TableBody>
+</table>
+`;
+
+exports[`Table should match striped snapshot 1`] = `
+<table
+  className="table table-striped"
+>
+  test
+</table>
+`;
